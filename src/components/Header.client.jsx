@@ -3,7 +3,7 @@ import {Link} from '@shopify/hydrogen/client';
 
 import CartToggle from './CartToggle.client';
 import {useCartUI} from './CartUIProvider.client';
-import CountrySelector from './CountrySelector.client';
+// import CountrySelector from './CountrySelector.client';
 import Navigation from './Navigation.client';
 import MobileNavigation from './MobileNavigation.client';
 
@@ -36,7 +36,8 @@ export default function Header({collections, storeName}) {
           }}
         >
           <div className="text-center w-full flex justify-between items-center">
-            <CountrySelector />
+            {/* <CountrySelector /> */}
+            <div className="hidden lg:block w-16" />
             <MobileNavigation
               collections={collections}
               isOpen={isMobileNavOpen}
