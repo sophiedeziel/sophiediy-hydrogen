@@ -7,7 +7,7 @@ export default function ProductOptions() {
   const {options, setSelectedOption, selectedOptions} = useProduct();
 
   return (
-    <>
+    <div className="mb-8">
       {options.map(({name, values}) => {
         return (
           <fieldset key={name} className="mt-8">
@@ -31,7 +31,7 @@ export default function ProductOptions() {
                       onChange={() => setSelectedOption(name, value)}
                     />
                     <div
-                      className={`p-2 border cursor-pointer rounded text-sm md:text-md ${
+                      className={`p-2 border border-gray-900 cursor-pointer text-sm md:text-md ${
                         checked ? 'bg-gray-900 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -44,6 +44,6 @@ export default function ProductOptions() {
           </fieldset>
         );
       })}
-    </>
+    </div>
   );
 }

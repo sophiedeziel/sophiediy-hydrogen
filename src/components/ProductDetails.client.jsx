@@ -26,16 +26,16 @@ function AddToCartMarkup() {
         className={BUTTON_PRIMARY_CLASSES}
         disabled={isOutOfStock}
       >
-        {isOutOfStock ? 'Out of stock' : 'Add to bag'}
+        {isOutOfStock ? 'Non disponible' : 'Ajouter au panier'}
       </AddToCartButton>
       {isOutOfStock ? (
-        <p className="text-black text-center">Available in 2-3 weeks</p>
+        <p className="text-black text-center">Disponible bientôt</p>
       ) : (
         <BuyNowButton
           variantId={selectedVariant.id}
           className={BUTTON_SECONDARY_CLASSES}
         >
-          Buy it now
+          Acheter maintenant
         </BuyNowButton>
       )}
     </div>
@@ -133,7 +133,7 @@ export default function ProductDetails({product}) {
           <div className="md:hidden mt-5 mb-8">
             <ProductTitle
               as="h1"
-              className="text-4xl font-bold text-black mb-4"
+              className="text-4xl font-bold text-gray-700 mb-4"
             />
             {product.vendor && (
               <div className="text-sm font-medium mb-2 text-gray-900">
@@ -152,13 +152,8 @@ export default function ProductDetails({product}) {
             <div className="hidden md:block">
               <ProductTitle
                 as="h1"
-                className="text-5xl font-bold text-black mb-4"
+                className="text-5xl font-bold text-gray-900 mb-4"
               />
-              {product.vendor && (
-                <div className="text-sm font-medium mb-2 text-gray-900">
-                  {product.vendor}
-                </div>
-              )}
               <ProductPrices />
             </div>
             {/* Product Options */}
@@ -221,9 +216,9 @@ export default function ProductDetails({product}) {
               </div>
             </div>
             {/* Product Description */}
-            <ProductDescription className="prose border-t border-gray-200 pt-6 text-black text-md" />
+            <ProductDescription className="prose pt-6 text-black text-md" />
             {sizeChartMetafield?.value && (
-              <div className="border-t border-gray-200">
+              <div>
                 <SizeChart />
               </div>
             )}

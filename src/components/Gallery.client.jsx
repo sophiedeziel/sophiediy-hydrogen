@@ -32,7 +32,7 @@ export default function Gallery() {
       <Image
         fetchpriority="high"
         data={selectedVariant.image}
-        className="w-[80vw] md:w-full h-full md:h-auto object-cover object-center flex-shrink-0 md:flex-shrink-none snap-start md:col-span-2 border border-gray-200 rounded-lg"
+        className="w-[80vw] md:w-full h-full md:h-auto object-cover object-center flex-shrink-0 md:flex-shrink-none snap-start md:col-span-2"
       />
       {galleryMedia.map((med) => {
         let extraProps = {};
@@ -45,7 +45,7 @@ export default function Gallery() {
           <MediaFile
             tabIndex="0"
             key={med.id || med.image.id}
-            className="w-[80vw] md:w-auto h-full md:h-auto object-cover object-center transition-all snap-start border border-gray-200 flex-shrink-0 rounded-lg"
+            className="w-[80vw] md:w-auto h-full md:h-auto object-cover object-center transition-all snap-start flex-shrink-0"
             data={med}
             fetchpriority="low"
             options={{
