@@ -16,14 +16,11 @@ import {Suspense} from 'react';
 
 export default function Index({country = {isoCode: 'US'}}) {
   return (
-    <Layout>
+    <Layout hero={<Hero />}>
       <Suspense fallback={null}>
         <SeoForHomepage />
       </Suspense>
-      <div className="relative mb-12">
-        <Suspense fallback={null}>
-          <TwitchEmbed />
-        </Suspense>
+      <div className="relative mb-12 ">
         <Suspense fallback={<BoxFallback />}>
           <FeaturedProductsBox country={country} />
         </Suspense>
@@ -32,6 +29,23 @@ export default function Index({country = {isoCode: 'US'}}) {
         </Suspense>
       </div>
     </Layout>
+  );
+}
+
+function Hero() {
+  return (
+    <div
+      className="relative mb-12"
+      style={{
+        backgroundImage: `url('/hero-background.jpeg')`,
+      }}
+    >
+      <div className="mx-auto max-w-7xl p-4 md:py-5 md:px-8">
+        <Suspense fallback={null}>
+          <TwitchEmbed />
+        </Suspense>
+      </div>
+    </div>
   );
 }
 
