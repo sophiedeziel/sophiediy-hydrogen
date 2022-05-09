@@ -2713,9 +2713,9 @@ graphql-tag@^2.12.4:
     tslib "^2.1.0"
 
 graphql@^16.3.0:
-  version "16.4.0"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.4.0.tgz#bb10b1b4683045dedcb67000eb4ad134a36c59e6"
-  integrity sha512-tYDNcRvKCcfHREZYje3v33NSrSD/ZpbWWdPtBtUUuXx9NCo/2QDxYzNqCnMvfsrnbwRpEHMovVrPu/ERoLrIRg==
+  version "16.5.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.5.0.tgz#41b5c1182eaac7f3d47164fb247f61e4dfb69c85"
+  integrity sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA==
 
 hard-rejection@^2.1.0:
   version "2.1.0"
@@ -4416,6 +4416,11 @@ react-refresh@^0.13.0:
   version "0.13.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.13.0.tgz#cbd01a4482a177a5da8d44c9755ebb1f26d5a1c1"
   integrity sha512-XP8A9BT0CpRBD+NYLLeIhld/RqG9+gktUjW1FkE+Vm7OCinbG1SshcK5tb9ls4kzvjZr9mOQc7HYgBngEyPAXg==
+
+react-twitch-embed@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-twitch-embed/-/react-twitch-embed-2.1.0.tgz#2bba8b50822acb827f3ab6251acca2a9b22bcdba"
+  integrity sha512-CtyuZxNs7YFYw5ZOHYYbqEbuukmHF6Lx6709w3BfxUtCAR2B5Oy2CTKNf0FIJAgISSWDXWMSC7jX+8u/XHHq3w==
 
 react@0.0.0-experimental-2bf7c02f0-20220314:
   version "0.0.0-experimental-2bf7c02f0-20220314"

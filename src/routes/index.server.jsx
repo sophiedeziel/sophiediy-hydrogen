@@ -11,7 +11,7 @@ import gql from 'graphql-tag';
 import Layout from '../components/Layout.server';
 import FeaturedCollection from '../components/FeaturedCollection';
 import ProductCard from '../components/ProductCard';
-import Welcome from '../components/Welcome.server';
+import TwitchEmbed from '../components/Twitch.client';
 import {Suspense} from 'react';
 
 export default function Index({country = {isoCode: 'US'}}) {
@@ -21,7 +21,9 @@ export default function Index({country = {isoCode: 'US'}}) {
         <SeoForHomepage />
       </Suspense>
       <div className="relative mb-12">
-        <Welcome />
+        <Suspense fallback={null}>
+          <TwitchEmbed />
+        </Suspense>
         <Suspense fallback={<BoxFallback />}>
           <FeaturedProductsBox country={country} />
         </Suspense>
