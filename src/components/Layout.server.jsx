@@ -29,6 +29,7 @@ export default function Layout({children, hero}) {
   });
   const collections = data ? flattenConnection(data.collections) : null;
   const products = data ? flattenConnection(data.products) : null;
+  const menu = data ? data.menu : null;
   const storeName = data ? data.shop.name : '';
 
   return (
@@ -44,7 +45,7 @@ export default function Layout({children, hero}) {
       <div className="min-h-screen max-w-screen text-gray-700 font-sans">
         {/* TODO: Find out why Suspense needs to be here to prevent hydration errors. */}
         <Suspense fallback={null}>
-          <Header collections={collections} storeName={storeName} />
+          <Header collections={collections} storeName={storeName} menu={menu} />
           <Cart />
         </Suspense>
         <main role="main" id="mainContent" className="relative bg-white">
@@ -64,6 +65,17 @@ const QUERY = gql`
   @inContext(language: $language) {
     shop {
       name
+    }
+    menu(handle: "main-menu") {
+      handle
+      items {
+        id
+        title
+        url
+        resourceId
+        tags
+        type
+      }
     }
     collections(first: $numCollections) {
       edges {

@@ -2,7 +2,7 @@ import {Fragment, useEffect} from 'react';
 import {Link} from '@shopify/hydrogen/client';
 import {FocusTrap} from '@headlessui/react';
 
-import MobileCountrySelector from './MobileCountrySelector.client';
+// import MobileCountrySelector from './MobileCountrySelector.client';
 import OpenIcon from './OpenIcon';
 
 let scrollPosition = 0;
@@ -10,7 +10,7 @@ let scrollPosition = 0;
 /**
  * A client component that defines the navigation for a mobile storefront
  */
-export default function MobileNavigation({collections, isOpen, setIsOpen}) {
+export default function MobileNavigation({menu, isOpen, setIsOpen}) {
   const OpenFocusTrap = isOpen ? FocusTrap : Fragment;
 
   useEffect(() => {
@@ -37,20 +37,23 @@ export default function MobileNavigation({collections, isOpen, setIsOpen}) {
         {isOpen ? (
           <div className="fixed -left-0 top-20 w-full h-screen z-10 bg-gray-50 px-4 md:px-12 py-7">
             <ul>
-              {collections.map((collection) => (
-                <li className="border-b border-gray-200" key={collection.id}>
+              {menu.items?.map((item) => (
+                <li className="border-b border-gray-200" key={item.id}>
                   <Link
                     className="group py-5 text-gray-700 flex items-center justify-between"
-                    to={`/collections/${collection.handle}`}
+                    to={item.url.replace(
+                      'https://sophie-diy.myshopify.com',
+                      '',
+                    )}
                     onClick={() => setIsOpen(false)}
                   >
-                    {collection.title}
+                    {item.title}
                     <ArrowRightIcon className="hidden group-hover:block" />
                   </Link>
                 </li>
               ))}
             </ul>
-            <MobileCountrySelector />
+            {/* <MobileCountrySelector /> */}
           </div>
         ) : null}
       </OpenFocusTrap>
