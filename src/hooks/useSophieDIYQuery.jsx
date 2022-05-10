@@ -3,7 +3,9 @@ import {useQuery} from '@shopify/hydrogen';
 export default function useSophieDIYQuery(query, variables = {}) {
   return useQuery(query.definitions[0].name.value, async () => {
     const response = await fetch(
-      'https://sophiediy.herokuapp.com/graphql.json',
+      process.env.NODE_ENV == 'development'
+        ? 'http://localhost:5000/graphql'
+        : 'https://sophiediy.herokuapp.com/graphql',
       {
         headers: {
           'content-type': 'application/json',
