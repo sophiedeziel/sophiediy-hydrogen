@@ -11,7 +11,7 @@ export default function Navigation({menu}) {
           <li key={item.id}>
             <Link
               to={item.url.replace('https://sophie-diy.myshopify.com', '')}
-              className="block p-4 hover:opacity-80"
+              className="block py-4 px-2 hover:text-yellow-400"
             >
               {item.title}
             </Link>

@@ -33,7 +33,7 @@ export default function Header({storeName, menu}) {
             paddingRight: isCartOpen ? scrollbarWidth : 0,
           }}
         >
-          <div className="text-center w-full flex justify-between items-center font-title">
+          <div className="text-center w-full flex justify-between items-center">
             {/* <CountrySelector /> */}
 
             <MobileNavigation
@@ -41,7 +41,7 @@ export default function Header({storeName, menu}) {
               isOpen={isMobileNavOpen}
               setIsOpen={setIsMobileNavOpen}
             />
-            <Link className="uppercase text-3xl" to="/">
+            <Link className="uppercase text-3xl  font-title" to="/">
               {storeName}
             </Link>
             <div className="flex">
