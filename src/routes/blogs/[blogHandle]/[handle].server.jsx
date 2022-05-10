@@ -48,7 +48,7 @@ export default function Article() {
       </p>
       <div
         dangerouslySetInnerHTML={{__html: article.contentHtml}}
-        className="prose prose-md lg:prose-xl max-w-none leading-relaxed prose-stone"
+        className="prose prose-md max-w-none leading-relaxed prose-stone"
       />
     </Layout>
   );
