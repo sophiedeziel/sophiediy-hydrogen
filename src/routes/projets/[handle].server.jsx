@@ -24,8 +24,8 @@ export default function Project() {
 }
 
 const QUERY = gql`
-  query ProjectByHandle {
-    project(handle: "shop") {
+  query ProjectByHandle($handle: String!) {
+    project(handle: $handle) {
       id
       title
       description

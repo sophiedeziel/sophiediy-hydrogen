@@ -1,5 +1,5 @@
 import Layout from '../components/Layout.server';
-import {flattenConnection} from '@shopify/hydrogen';
+import {flattenConnection, Link} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 import useSophieDIYQuery from '../hooks/useSophieDIYQuery';
 
@@ -22,8 +22,8 @@ export default function Projets() {
             key={project.id}
             className=" text-white border border-gray-800 md:max-w-l md:flex-row"
           >
-            <h2 className="w-full text-xl font-bold tracking-tight border border-gray-900 text-white bg-gray-900 p-4">
-              {project.title}
+            <h2 className="w-full text-xl font-bold tracking-tight border border-gray-900 text-white bg-gray-900 p-4 hover:text-yellow-500">
+              <Link to={'/projets/' + project.handle}>{project.title}</Link>
             </h2>
             <div
               className="font-normal text-gray-800 p-4 prose"
@@ -43,6 +43,7 @@ const QUERY = gql`
         node {
           id
           description
+          handle
           title
           status
           descriptionRaw
