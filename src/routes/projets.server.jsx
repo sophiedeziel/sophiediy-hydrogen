@@ -26,7 +26,7 @@ export default function Projets() {
               {project.title}
             </h2>
             <div
-              className="font-normal text-gray-800 p-4"
+              className="font-normal text-gray-800 p-4 prose"
               dangerouslySetInnerHTML={{__html: project.description}}
             ></div>
           </div>
