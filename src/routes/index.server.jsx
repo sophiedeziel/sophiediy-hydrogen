@@ -72,7 +72,7 @@ function SeoForHomepage() {
 }
 
 function BoxFallback() {
-  return <div className="bg-white p-12 shadow-xl rounded-xl mb-10 h-40"></div>;
+  return <div className="bg-white p-12 shadow-xl mb-10 h-40"></div>;
 }
 
 function FeaturedProductsBox({country}) {
@@ -94,11 +94,11 @@ function FeaturedProductsBox({country}) {
     : null;
 
   return (
-    <div className="bg-white p-12 shadow-xl rounded-xl mb-10">
+    <div className="bg-white p-12 shadow-xl  mb-10">
       {featuredProductsCollection ? (
         <>
           <div className="flex justify-between items-center mb-8 text-md font-medium">
-            <span className="text-black uppercase">
+            <span className="font-bold text-4xl md:text-5xl text-gray-900 mt-2">
               {featuredProductsCollection.title}
             </span>
             <span className="hidden md:inline-flex">
@@ -161,7 +161,10 @@ const SEO_QUERY = gql`
 const QUERY = gql`
   query indexContent($country: CountryCode, $language: LanguageCode)
   @inContext(country: $country, language: $language) {
-    collections(first: 2) {
+    collections(
+      first: 2
+      query: "(title:Objets imprimés en 3D) OR (title:stickers)"
+    ) {
       edges {
         node {
           handle

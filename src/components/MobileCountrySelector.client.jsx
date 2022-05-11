@@ -13,7 +13,7 @@ export default function MobileCountrySelector() {
   const [selectedCountry, setSelectedCountry] = useCountry();
 
   return (
-    <div className="mt-8 rounded border border-gray-200 w-full">
+    <div className="mt-8 border border-gray-200 w-full">
       <Listbox onChange={setSelectedCountry}>
         {({open}) => {
           setTimeout(() => setListboxOpen(open));
@@ -42,7 +42,7 @@ export default function MobileCountrySelector() {
                       selectedCountry={selectedCountry}
                       getClassName={(active) => {
                         return (
-                          `py-2 px-4 rounded flex justify-between items-center text-left ` +
+                          `py-2 px-4 flex justify-between items-center text-left ` +
                           `w-full cursor-pointer ${
                             active ? 'bg-gray-100' : null
                           }`

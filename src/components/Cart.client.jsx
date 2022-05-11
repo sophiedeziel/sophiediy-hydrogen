@@ -37,7 +37,7 @@ export default function Cart() {
       <Dialog open={isCartOpen} onClose={closeCart}>
         <Dialog.Overlay className="fixed z-20 inset-0 bg-gray-50 opacity-75" />
         <div
-          className={`absolute flex flex-col md:block z-20 top-0 left-0 right-0 bottom-0 md:top-7 h-full md:left-auto md:right-7 md:bottom-auto md:h-auto md:max-h-[calc(100vh-56px)] bg-gray-50 w-full md:w-[470px] rounded-b-lg shadow-2xl ${
+          className={`absolute flex flex-col md:block z-20 top-0 left-0 right-0 bottom-0 md:top-7 h-full md:left-auto md:right-7 md:bottom-auto md:h-auto md:max-h-[calc(100vh-56px)] bg-gray-50 w-full md:w-[470px] shadow-2xl ${
             totalQuantity === 0 ? 'overflow-hidden' : 'overflow-y-scroll'
           }`}
         >
@@ -97,7 +97,7 @@ function LineInCart() {
       <div role="cell" className="flex-shrink-0 mr-7">
         <Link to={`/products/${merchandise.product.handle}`}>
           <CartLineImage
-            className="bg-white border border-black border-opacity-5 rounded-xl "
+            className="bg-white border border-black border-opacity-5 "
             options={{width: 98, height: 98, crop: 'center'}}
           />
         </Link>
@@ -148,7 +148,7 @@ function LineInCart() {
 
 function CartItemQuantity() {
   return (
-    <div className="flex border rounded border-gray-300 items-center overflow-auto mt-2">
+    <div className="flex border border-gray-300 items-center overflow-auto mt-2">
       <CartLineQuantityAdjustButton
         adjust="decrease"
         aria-label="Decrease quantity"
@@ -217,7 +217,7 @@ function CartFooter() {
             </span>
           </div>
         </div>
-        <CartShopPayButton className="flex my-4 justify-center w-full bg-[#5a31f4] py-2 rounded-md" />
+        <CartShopPayButton className="flex my-4 justify-center w-full bg-[#5a31f4] py-2" />
         <CartCheckoutButton className={BUTTON_PRIMARY_CLASSES}>
           Checkout
         </CartCheckoutButton>

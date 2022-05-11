@@ -25,7 +25,7 @@ export default function ProductCard({product}) {
             />
           ) : null}
           {!selectedVariant?.availableForSale && (
-            <div className="absolute top-3 left-3 rounded-3xl text-xs bg-black text-white py-3 px-4">
+            <div className="absolute top-3 left-3 rounded-3xl text-xs bg-yellow-800 text-white py-3 px-4">
               Non disponible
             </div>
           )}

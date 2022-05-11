@@ -24,7 +24,7 @@ export default function CountrySelector() {
               </Listbox.Button>
 
               <Listbox.Options className="absolute z-10 mt-2">
-                <div className="bg-white p-4 rounded-lg drop-shadow-2xl overflow-y-auto h-64">
+                <div className="bg-white p-4 drop-shadow-2xl overflow-y-auto h-64">
                   <Listbox.Option
                     disabled
                     className="p-2 text-md text-left font-medium uppercase"
@@ -44,7 +44,7 @@ export default function CountrySelector() {
                         getClassName={(active) => {
                           return (
                             `w-36 py-2 px-3 flex justify-between items-center text-left cursor-pointer` +
-                            `rounded ${active ? 'bg-gray-200' : null}`
+                            ` ${active ? 'bg-gray-200' : null}`
                           );
                         }}
                       />
