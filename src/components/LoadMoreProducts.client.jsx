@@ -27,7 +27,7 @@ export default function LoadMoreProducts({startingCount}) {
             );
           }}
         >
-          Load more
+          Voir plus
         </button>
       )}
     </div>

@@ -7,9 +7,9 @@ export default function MoneyPrice({money}) {
   const {currencyCode, currencyNarrowSymbol, amount} = useMoney(money);
   return (
     <span className="text-black text-md">
+      {amount}
       {currencyCode}
       {currencyNarrowSymbol}
-      {amount}
     </span>
   );
 }

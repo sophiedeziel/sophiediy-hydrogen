@@ -16,8 +16,8 @@ function NotFoundHero() {
           We&#39;ve lost this page
         </h1>
         <p className="text-lg m-8 text-gray-500">
-          We couldn’t find the page you’re looking for. Try checking the URL or
-          heading back to the home page.
+          Cette page est introuvable. Comment avez=vous fait pour vous ramasser
+          icitte?
         </p>
         <Button
           className="w-full md:mx-auto md:w-96"

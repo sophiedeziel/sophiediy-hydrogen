@@ -106,7 +106,7 @@ function FeaturedProductsBox({country}) {
                 to={`/collections/${featuredProductsCollection.handle}`}
                 className="text-blue-600 hover:underline"
               >
-                Shop all
+                Voir tout
               </Link>
             </span>
           </div>

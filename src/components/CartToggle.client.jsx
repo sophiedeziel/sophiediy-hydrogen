@@ -24,7 +24,7 @@ export default function CartToggle({handleClick}) {
       }}
     >
       <CartIconWithItems />
-      <span className="sr-only">Open cart</span>
+      <span className="sr-only">Ouvrir le panier</span>
     </button>
   );
 }

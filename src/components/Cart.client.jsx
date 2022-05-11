@@ -65,7 +65,7 @@ function CartHeader() {
         <span className="sr-only">Close cart</span>
       </button>
       <span className="text-xs text-gray-500">
-        Free shipping on orders over $50
+        Livraison gratuite pour les commandes de 50$ ou plus!
       </span>
       <CartIconWithItems />
     </header>
@@ -76,9 +76,9 @@ function CartItems() {
   return (
     <div className="px-7 flex-grow" role="table" aria-label="Shopping cart">
       <div role="row" className="sr-only">
-        <div role="columnheader">Product image</div>
-        <div role="columnheader">Product details</div>
-        <div role="columnheader">Price</div>
+        <div role="columnheader">Image de produit</div>
+        <div role="columnheader">Détails du produit</div>
+        <div role="columnheader">Prix</div>
       </div>
       <CartLines>
         <LineInCart />
@@ -124,7 +124,7 @@ function LineInCart() {
       <div role="cell" className="flex flex-col justify-between items-end">
         <CartLineQuantityAdjustButton
           adjust="remove"
-          aria-label="Remove from cart"
+          aria-label="Retirer du panier"
           className="disabled:pointer-events-all disabled:cursor-wait"
         >
           <svg
@@ -151,7 +151,7 @@ function CartItemQuantity() {
     <div className="flex border border-gray-300 items-center overflow-auto mt-2">
       <CartLineQuantityAdjustButton
         adjust="decrease"
-        aria-label="Decrease quantity"
+        aria-label="Réduire la quantité"
         className="p-2 disabled:pointer-events-all disabled:cursor-wait"
       >
         <svg
@@ -173,7 +173,7 @@ function CartItemQuantity() {
       />
       <CartLineQuantityAdjustButton
         adjust="increase"
-        aria-label="Increase quantity"
+        aria-label="Aumenter la quantité"
         className="p-2 text-gray-400 disabled:pointer-events-all disabled:cursor-wait"
       >
         <svg
@@ -200,7 +200,7 @@ function CartFooter() {
         <div role="table" aria-label="Cost summary">
           <div role="row" className="flex justify-between">
             <span className="font-semibold" role="rowheader">
-              Subtotal
+              Sous-total
             </span>
             <CartEstimatedCost
               amountType="subtotal"
@@ -210,16 +210,16 @@ function CartFooter() {
           </div>
           <div role="row" className="flex justify-between mt-2">
             <span className="font-semibold" role="rowheader">
-              Shipping
+              Livraison
             </span>
             <span role="cell" className="uppercase">
-              Free
+              Gratuit
             </span>
           </div>
         </div>
         <CartShopPayButton className="flex my-4 justify-center w-full bg-[#5a31f4] py-2" />
         <CartCheckoutButton className={BUTTON_PRIMARY_CLASSES}>
-          Checkout
+          Payer
         </CartCheckoutButton>
       </div>
     </footer>
@@ -231,14 +231,14 @@ function CartEmpty() {
   return (
     <div className="p-7 flex flex-col">
       <p className="mb-4 text-lg text-gray-500 text-center">
-        Your cart is empty
+        Votre panier est vide
       </p>
       <button
         type="button"
         onClick={closeCart}
         className={BUTTON_PRIMARY_CLASSES}
       >
-        Continue Shopping
+        Continuer de magasiner
       </button>
     </div>
   );

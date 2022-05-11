@@ -18,7 +18,7 @@ export default function FeaturedCollection({collection}) {
           to={`/collections/${collection.handle}`}
           className="inline-block bg-gray-900 text-white text-lg font-medium py-4 px-16 uppercase"
         >
-          Shop Collection
+          Voir la collection
         </Link>
       </div>
     </div>
