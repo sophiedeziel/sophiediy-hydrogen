@@ -11,7 +11,7 @@
     "lint:css": "stylelint ./src/**/*.{css,sass,scss}",
     "build": "yarn build:client && yarn build:server && yarn build:worker",
     "build:client": "vite build --outDir dist/client --manifest",
-    "build:server": "vite build --outDir dist/server --ssr @shopify/hydrogen/platforms/node",
+    "build:server": "vite build --outDir dist/server --ssr server",
     "build:worker": "cross-env WORKER=true vite build --outDir dist/worker --ssr @shopify/hydrogen/platforms/worker",
     "serve": "node --enable-source-maps dist/server",
     "test": "WATCH=true vitest",
