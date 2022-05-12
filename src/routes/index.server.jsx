@@ -14,6 +14,8 @@ import ProductCard from '../components/ProductCard';
 import TwitchEmbed from '../components/Twitch.client';
 import {Suspense} from 'react';
 
+import backgroundImage from '../../public/hero-background.jpeg';
+
 export default function Index({country = {isoCode: 'US'}}) {
   return (
     <Layout hero={<Hero />}>
@@ -37,7 +39,7 @@ function Hero() {
     <div
       className="relative mb-12"
       style={{
-        backgroundImage: `url('/hero-background.jpeg')`,
+        backgroundImage: `url(${backgroundImage})`,
       }}
     >
       <div className="mx-auto max-w-7xl p-4 md:py-5 md:px-8">
