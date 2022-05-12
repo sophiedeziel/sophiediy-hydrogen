@@ -11,10 +11,8 @@ import gql from 'graphql-tag';
 import Layout from '../components/Layout.server';
 import FeaturedCollection from '../components/FeaturedCollection';
 import ProductCard from '../components/ProductCard';
-import TwitchEmbed from '../components/Twitch.client';
+import Hero from '../components/Hero.client';
 import {Suspense} from 'react';
-
-import backgroundImage from '../../public/hero-background.jpg';
 
 export default function Index({country = {isoCode: 'US'}}) {
   return (
@@ -31,23 +29,6 @@ export default function Index({country = {isoCode: 'US'}}) {
         </Suspense>
       </div>
     </Layout>
-  );
-}
-
-function Hero() {
-  return (
-    <div
-      className="relative mb-12"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-      }}
-    >
-      <div className="mx-auto max-w-7xl p-4 md:py-5 md:px-8">
-        <Suspense fallback={null}>
-          <TwitchEmbed />
-        </Suspense>
-      </div>
-    </div>
   );
 }
 
