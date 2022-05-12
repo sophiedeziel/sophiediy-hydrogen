@@ -14,7 +14,7 @@ import ProductCard from '../components/ProductCard';
 import TwitchEmbed from '../components/Twitch.client';
 import {Suspense} from 'react';
 
-import backgroundImage from '../../public/hero-background.jpeg';
+import backgroundImage from '../../public/hero-background.jpg';
 
 export default function Index({country = {isoCode: 'US'}}) {
   return (
