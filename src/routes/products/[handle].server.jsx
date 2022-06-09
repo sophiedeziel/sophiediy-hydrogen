@@ -106,34 +106,6 @@ const QUERY = gql`
           }
         }
       }
-      metafields(first: 20) {
-        edges {
-          node {
-            id
-            type
-            namespace
-            key
-            value
-            createdAt
-            updatedAt
-            description
-            reference {
-              __typename
-              ... on MediaImage {
-                id
-                mediaContentType
-                image {
-                  id
-                  url
-                  altText
-                  width
-                  height
-                }
-              }
-            }
-          }
-        }
-      }
       priceRange {
         maxVariantPrice {
           currencyCode
@@ -164,34 +136,6 @@ const QUERY = gql`
               altText
               width
               height
-            }
-            metafields(first: 10) {
-              edges {
-                node {
-                  id
-                  type
-                  namespace
-                  key
-                  value
-                  createdAt
-                  updatedAt
-                  description
-                  reference {
-                    __typename
-                    ... on MediaImage {
-                      id
-                      mediaContentType
-                      image {
-                        id
-                        url
-                        altText
-                        width
-                        height
-                      }
-                    }
-                  }
-                }
-              }
             }
             priceV2 {
               amount
