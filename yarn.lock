@@ -647,14 +647,14 @@
     "@shopify/cli-kit" "3.0.1"
     "@shopify/plugin-ngrok" "^0.2.6"
 
-"@shopify/hydrogen@^0.17.3":
-  version "0.17.3"
-  resolved "https://registry.yarnpkg.com/@shopify/hydrogen/-/hydrogen-0.17.3.tgz#33cb07287bdeeca3beb890b66868e1ce294d6844"
-  integrity sha512-hxvopln3ohyNr68rrdEi2h1n9XsNJmdrWyqpcVFCRQB18tJHhy+7V1LTFdZYpqE9XTu8llLyf4AruaW3riQWxA==
+"@shopify/hydrogen@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@shopify/hydrogen/-/hydrogen-0.20.0.tgz#faf7a5ac8500b18249437256e4f9ed85383d298e"
+  integrity sha512-Mc5F44GbR2FTvjEK0klBGEZGUZ7egqOWznm4o2P/NfUovLn3JBDlWP3oNdHqHegs/mGabXqtfeHP8+A3rkiNZw==
   dependencies:
     "@vitejs/plugin-react" "^1.3.0"
     abort-controller "^3.0.0"
-    body-parser "^1.19.2"
+    body-parser "^1.20.0"
     connect "^3.7.0"
     es-module-lexer "^0.10.0"
     fast-glob "^3.2.11"
@@ -1230,7 +1230,7 @@ bl@^4.0.3, bl@^4.1.0:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
-body-parser@^1.19.2, body-parser@^1.20.0:
+body-parser@^1.20.0:
   version "1.20.0"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.20.0.tgz#3de69bd89011c11573d7bfee6a64f11b6bd27cc5"
   integrity sha512-DfJ+q6EPcGKZD1QWUjSpqp+Q7bDQTsQIF4zfUAtZ6qk+H/3/QRhg9CEp39ss+/T2vw0+HaidC0ecJj/DRLIaKg==
