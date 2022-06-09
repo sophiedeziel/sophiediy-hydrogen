@@ -10,6 +10,11 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@antfu/utils@^0.5.1":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.5.2.tgz#8c2d931ff927be0ebe740169874a3d4004ab414b"
+  integrity sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==
+
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -636,15 +641,16 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@shopify/cli-hydrogen@3.0.11":
-  version "3.0.11"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.0.11.tgz#9a9a758dc38ecc1769a5a01e67276e94c7d0ff6b"
-  integrity sha512-Dwd8X58eHAbL2e/AKjN1YzQCwxSKYjEN5t9waGk+/4asnB49qThWaNt1l1ByTiIMpoQ7J95PR4RY528zxPK5QA==
+"@shopify/cli-hydrogen@3.0.12":
+  version "3.0.12"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.0.12.tgz#7184ef57e68830dea630e8594a76d7c73a2f0826"
+  integrity sha512-HJDTtSCAFhzEcccwSDdqQqRgThRwMGoxFNi/STJ8fV/VrhrObvdGAxHz9yRTDRxbofHSx8/Skq15YhV47nEXJQ==
   dependencies:
     "@oclif/core" "1.9.0"
     "@shopify/mini-oxygen" "^0.0.5"
     "@types/prettier" "^2.6.3"
     prettier "^2.6.1"
+    unconfig "^0.3.4"
     vite "^2.9.9"
 
 "@shopify/cli-kit@3.0.1":
@@ -1792,6 +1798,11 @@ defined@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/defined/-/defined-1.0.0.tgz#c98d9bcef75674188e110969151199e39b1fa693"
   integrity sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM=
+
+defu@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/defu/-/defu-6.0.0.tgz#b397a6709a2f3202747a3d9daf9446e41ad0c5fc"
+  integrity sha512-t2MZGLf1V2rV4VBZbWIaXKdX/mUcYW0n2znQZoADBkGGxYL8EWqCuCZBmJPJ/Yy9fofJkyuuSuo5GSwo0XdEgw==
 
 delegates@^1.0.0:
   version "1.0.0"
@@ -3327,6 +3338,11 @@ jake@^10.8.5:
     chalk "^4.0.2"
     filelist "^1.0.1"
     minimatch "^3.0.4"
+
+jiti@^1.13.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.13.0.tgz#3cdfc4e651ca0cca4c62ed5e47747b5841d41a8e"
+  integrity sha512-/n9mNxZj/HDSrincJ6RP+L+yXbpnB8FybySBa+IjIaoH9FIxBbrbRT5XUbe8R7zuVM2AQqNMNDDqz0bzx3znOQ==
 
 jpeg-js@0.4.3:
   version "0.4.3"
@@ -5584,6 +5600,15 @@ unbox-primitive@^1.0.2:
     has-bigints "^1.0.2"
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
+
+unconfig@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/unconfig/-/unconfig-0.3.4.tgz#f0c85584a088a434dde2215d8a3b272427d6056c"
+  integrity sha512-cf39F1brwQuLSuMLTYXOdWJH0O1CJee6a4QW1nYtO7SoBUfVvQCvEel6ssTNXtPfi17kop1ADmVtmC49NlFkIQ==
+  dependencies:
+    "@antfu/utils" "^0.5.1"
+    defu "^6.0.0"
+    jiti "^1.13.0"
 
 undici@4.13.0:
   version "4.13.0"
