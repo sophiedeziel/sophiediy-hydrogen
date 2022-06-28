@@ -4108,10 +4108,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.3.2, prettier@^2.6.1, prettier@^2.6.2:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.2.tgz#e26d71a18a74c3d0f0597f55f01fb6c06c206032"
-  integrity sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==
+prettier@^2.6.1, prettier@^2.6.2, prettier@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
+  integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
 
 printable-characters@^1.0.42:
   version "1.0.42"
@@ -5272,10 +5272,10 @@ vite-plugin-inspect@^0.3.6:
     sirv "^2.0.2"
     ufo "^0.7.10"
 
-vite@^2.7.10, vite@^2.9.0, vite@^2.9.9:
-  version "2.9.10"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.10.tgz#f574d96655622c2e0fbc662edd0ed199c60fe91a"
-  integrity sha512-TwZRuSMYjpTurLqXspct+HZE7ONiW9d+wSWgvADGxhDPPyoIcNywY+RX4ng+QpK30DCa1l/oZgi2PLZDibhzbQ==
+vite@^2.7.10, vite@^2.9.13, vite@^2.9.9:
+  version "2.9.13"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.13.tgz#859cb5d4c316c0d8c6ec9866045c0f7858ca6abc"
+  integrity sha512-AsOBAaT0AD7Mhe8DuK+/kE4aWYFMx/i0ZNi98hJclxb4e0OhQcZYUrvLjIaQ8e59Ui7txcvKMiJC1yftqpQoDw==
   dependencies:
     esbuild "^0.14.27"
     postcss "^8.4.13"
