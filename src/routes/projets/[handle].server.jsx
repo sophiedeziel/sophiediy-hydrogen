@@ -1,7 +1,6 @@
-import {useRouteParams} from '@shopify/hydrogen';
+import {useRouteParams, gql} from '@shopify/hydrogen';
 import Layout from '../../components/Layout.server';
 
-import gql from 'graphql-tag';
 import useSophieDIYQuery from '../../hooks/useSophieDIYQuery';
 
 export default function Project() {

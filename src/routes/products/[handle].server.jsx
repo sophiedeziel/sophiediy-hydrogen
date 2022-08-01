@@ -1,11 +1,18 @@
-import {useShop, useShopQuery, Seo, useRouteParams} from '@shopify/hydrogen';
-import gql from 'graphql-tag';
+import {
+  useShop,
+  useShopQuery,
+  useSession,
+  Seo,
+  useRouteParams,
+  gql,
+} from '@shopify/hydrogen';
 
 import ProductDetails from '../../components/ProductDetails.client';
 import NotFound from '../../components/NotFound.server';
 import Layout from '../../components/Layout.server';
 
-export default function Product({country = {isoCode: 'US'}}) {
+export default function Product() {
+  const {countryCode = 'US'} = useSession();
   const {handle} = useRouteParams();
 
   const {languageCode} = useShop();
@@ -15,7 +22,7 @@ export default function Product({country = {isoCode: 'US'}}) {
   } = useShopQuery({
     query: QUERY,
     variables: {
-      country: country.isoCode,
+      country: countryCode.isoCode,
       language: languageCode,
       handle,
     },
@@ -61,47 +68,46 @@ const QUERY = gql`
       }
       handle
       id
+      vendor
       media(first: 6) {
-        edges {
-          node {
-            ... on MediaImage {
-              mediaContentType
-              image {
-                id
-                url
-                altText
-                width
-                height
-              }
-            }
-            ... on Video {
-              mediaContentType
+        nodes {
+          ... on MediaImage {
+            mediaContentType
+            image {
               id
-              previewImage {
-                url
-              }
-              sources {
-                mimeType
-                url
-              }
+              url
+              altText
+              width
+              height
             }
-            ... on ExternalVideo {
-              mediaContentType
-              id
-              embedUrl
-              host
+          }
+          ... on Video {
+            mediaContentType
+            id
+            previewImage {
+              url
             }
-            ... on Model3d {
-              mediaContentType
-              id
-              alt
-              mediaContentType
-              previewImage {
-                url
-              }
-              sources {
-                url
-              }
+            sources {
+              mimeType
+              url
+            }
+          }
+          ... on ExternalVideo {
+            mediaContentType
+            id
+            embedUrl
+            host
+          }
+          ... on Model3d {
+            mediaContentType
+            id
+            alt
+            mediaContentType
+            previewImage {
+              url
+            }
+            sources {
+              url
             }
           }
         }
@@ -122,46 +128,43 @@ const QUERY = gql`
       }
       title
       variants(first: 250) {
-        edges {
-          node {
-            availableForSale
-            compareAtPriceV2 {
-              amount
-              currencyCode
-            }
+        nodes {
+          availableForSale
+          compareAtPriceV2 {
+            amount
+            currencyCode
+          }
+          id
+          image {
             id
-            image {
-              id
-              url
-              altText
-              width
-              height
-            }
-            priceV2 {
-              amount
-              currencyCode
-            }
-            selectedOptions {
-              name
-              value
-            }
-            sku
-            title
-            unitPrice {
-              amount
-              currencyCode
-            }
-            unitPriceMeasurement {
-              measuredType
-              quantityUnit
-              quantityValue
-              referenceUnit
-              referenceValue
-            }
+            url
+            altText
+            width
+            height
+          }
+          priceV2 {
+            amount
+            currencyCode
+          }
+          selectedOptions {
+            name
+            value
+          }
+          sku
+          title
+          unitPrice {
+            amount
+            currencyCode
+          }
+          unitPriceMeasurement {
+            measuredType
+            quantityUnit
+            quantityValue
+            referenceUnit
+            referenceValue
           }
         }
       }
-      vendor
     }
   }
 `;

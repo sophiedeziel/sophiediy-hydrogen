@@ -1,13 +1,10 @@
 import {
-  flattenConnection,
-  useProduct,
+  useProductOptions,
   useParsedMetafields,
-  ProductProvider,
-  ProductTitle,
-  ProductDescription,
   ProductPrice,
   AddToCartButton,
   BuyNowButton,
+  ProductOptionsProvider,
 } from '@shopify/hydrogen/client';
 import ProductOptions from './ProductOptions.client';
 import Gallery from './Gallery.client';
@@ -17,7 +14,7 @@ import {
 } from './Button.client';
 
 function AddToCartMarkup() {
-  const {selectedVariant} = useProduct();
+  const {selectedVariant} = useProductOptions();
   const isOutOfStock = !selectedVariant.availableForSale;
 
   return (
@@ -90,26 +87,28 @@ function SizeChart() {
   );
 }
 
-function ProductPrices() {
-  const product = useProduct();
+function ProductPrices({product}) {
+  const {selectedVariant} = useProductOptions();
 
   return (
     <>
       <ProductPrice
         className="text-gray-500 line-through text-lg font-semibold"
         priceType="compareAt"
-        variantId={product.selectedVariant.id}
+        variantId={selectedVariant.id}
+        data={product}
       />
       <ProductPrice
         className="text-gray-900 text-lg font-semibold"
-        variantId={product.selectedVariant.id}
+        variantId={selectedVariant.id}
+        data={product}
       />
     </>
   );
 }
 
 export default function ProductDetails({product}) {
-  const initialVariant = flattenConnection(product.variants)[0];
+  const initialVariant = product.variants.nodes[0];
 
   const productMetafields = useParsedMetafields(product.metafields || {});
   const sizeChartMetafield = productMetafields.find(
@@ -128,13 +127,15 @@ export default function ProductDetails({product}) {
 
   return (
     <>
-      <ProductProvider data={product} initialVariantId={initialVariant.id}>
+      <ProductOptionsProvider
+        data={product}
+        initialVariantId={initialVariant.id}
+      >
         <div className="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-x-8 my-16">
           <div className="md:hidden mt-5 mb-8">
-            <ProductTitle
-              as="h1"
-              className="text-4xl font-bold text-gray-700 mb-4"
-            />
+            <h1 className="text-4xl font-bold text-gray-700 mb-4">
+              {product.title}
+            </h1>
             {product.vendor && (
               <div className="text-sm font-medium mb-2 text-gray-900">
                 {product.vendor}
@@ -142,19 +143,18 @@ export default function ProductDetails({product}) {
             )}
             <span />
             <div className="flex justify-between md:block">
-              <ProductPrices />
+              <ProductPrices product={product} />
             </div>
           </div>
 
-          <Gallery />
+          <Gallery product={product} />
 
           <div>
             <div className="hidden md:block">
-              <ProductTitle
-                as="h1"
-                className="text-5xl font-bold text-gray-900 mb-4"
-              />
-              <ProductPrices />
+              <h1 className="text-5xl font-bold text-gray-900 mb-4">
+                {product.title}
+              </h1>
+              <ProductPrices product={product} />
             </div>
             {/* Product Options */}
             <div className="mt-8">
@@ -216,7 +216,10 @@ export default function ProductDetails({product}) {
               </div>
             </div>
             {/* Product Description */}
-            <ProductDescription className="prose pt-6 text-black text-md" />
+            <div className="prose pt-6 text-black text-md">
+              {product.description}
+            </div>
+
             {sizeChartMetafield?.value && (
               <div>
                 <SizeChart />
@@ -224,7 +227,7 @@ export default function ProductDetails({product}) {
             )}
           </div>
         </div>
-      </ProductProvider>
+      </ProductOptionsProvider>
     </>
   );
 }

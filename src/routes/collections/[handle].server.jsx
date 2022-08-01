@@ -1,16 +1,12 @@
-import {useShop, useShopQuery, flattenConnection, Seo} from '@shopify/hydrogen';
-import gql from 'graphql-tag';
+import {useShop, useShopQuery, useSession, Seo, gql} from '@shopify/hydrogen';
 
 import LoadMoreProducts from '../../components/LoadMoreProducts.client';
 import Layout from '../../components/Layout.server';
 import ProductCard from '../../components/ProductCard';
 import NotFound from '../../components/NotFound.server';
 
-export default function Collection({
-  country = {isoCode: 'US'},
-  collectionProductCount = 24,
-  params,
-}) {
+export default function Collection({collectionProductCount = 24, params}) {
+  const {countryCode = 'CA'} = useSession();
   const {languageCode} = useShop();
 
   const {handle} = params;
@@ -18,7 +14,7 @@ export default function Collection({
     query: QUERY,
     variables: {
       handle,
-      country: country.isoCode,
+      country: countryCode.isoCode,
       language: languageCode,
       numProducts: collectionProductCount,
     },
@@ -30,7 +26,7 @@ export default function Collection({
   }
 
   const collection = data.collection;
-  const products = flattenConnection(collection.products);
+  const products = collection.products.nodes;
   const hasNextPage = data.collection.products.pageInfo.hasNextPage;
 
   return (
@@ -84,44 +80,40 @@ const QUERY = gql`
         altText
       }
       products(first: $numProducts) {
-        edges {
-          node {
-            title
-            vendor
-            handle
-            descriptionHtml
-            compareAtPriceRange {
-              maxVariantPrice {
-                currencyCode
-                amount
-              }
-              minVariantPrice {
-                currencyCode
-                amount
-              }
+        nodes {
+          title
+          vendor
+          handle
+          descriptionHtml
+          compareAtPriceRange {
+            maxVariantPrice {
+              currencyCode
+              amount
             }
-            variants(first: 1) {
-              edges {
-                node {
-                  id
-                  title
-                  availableForSale
-                  image {
-                    id
-                    url
-                    altText
-                    width
-                    height
-                  }
-                  priceV2 {
-                    currencyCode
-                    amount
-                  }
-                  compareAtPriceV2 {
-                    currencyCode
-                    amount
-                  }
-                }
+            minVariantPrice {
+              currencyCode
+              amount
+            }
+          }
+          variants(first: 1) {
+            nodes {
+              id
+              title
+              availableForSale
+              image {
+                id
+                url
+                altText
+                width
+                height
+              }
+              priceV2 {
+                currencyCode
+                amount
+              }
+              compareAtPriceV2 {
+                currencyCode
+                amount
               }
             }
           }

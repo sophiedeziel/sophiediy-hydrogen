@@ -1,4 +1,4 @@
-import {useState, Suspense} from 'react';
+import {useState, useCallback, Suspense} from 'react';
 import {useCountry, fetchSync} from '@shopify/hydrogen/client';
 import {Listbox} from '@headlessui/react';
 import SpinnerIcon from './SpinnerIcon.client';
@@ -9,7 +9,20 @@ import SpinnerIcon from './SpinnerIcon.client';
 export default function CountrySelector() {
   const [listboxOpen, setListboxOpen] = useState(false);
 
-  const [selectedCountry, setSelectedCountry] = useCountry();
+  const [selectedCountry] = useCountry();
+
+  const setSelectedCountry = useCallback(({isoCode, name}) => {
+    fetch(`/countries`, {
+      body: JSON.stringify({isoCode, name}),
+      method: 'POST',
+    })
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <div className="hidden lg:block">

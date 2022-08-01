@@ -2,8 +2,8 @@ import {
   flattenConnection,
   useShopQuery,
   useRouteParams,
+  gql,
 } from '@shopify/hydrogen';
-import gql from 'graphql-tag';
 import ArticleCard from '../../components/ArticleCard';
 
 import Layout from '../../components/Layout.server';

@@ -6,6 +6,7 @@ import {
   ShopifyProvider,
   PerformanceMetricsServerAnalyticsConnector,
   CookieSessionStorage,
+  ShopifyAnalytics,
 } from '@shopify/hydrogen';
 import {Suspense} from 'react';
 import shopifyConfig from '../shopify.config';
@@ -22,6 +23,7 @@ function App({routes}) {
   return (
     <Suspense fallback={<LoadingFallback />}>
       <ShopifyProvider shopifyConfig={shopifyConfig}>
+        <ShopifyAnalytics />
         <CartProvider>
           <DefaultSeo />
           <Router>

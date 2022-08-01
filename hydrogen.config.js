@@ -1,7 +1,7 @@
 import {defineConfig} from '@shopify/hydrogen/config';
 
 export default defineConfig({
-  routes: import.meta.globEager('./src/routes/**/*.server.[jt](s|sx)'),
+  routes: '/src/routes',
   shopify: {
     defaultLocale: 'fr',
     storeDomain: 'sophie-diy.myshopify.com',

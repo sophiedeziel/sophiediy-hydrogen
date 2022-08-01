@@ -1,6 +1,5 @@
 import Layout from '../components/Layout.server';
-import {flattenConnection, Link} from '@shopify/hydrogen';
-import gql from 'graphql-tag';
+import {flattenConnection, Link, gql} from '@shopify/hydrogen';
 import useSophieDIYQuery from '../hooks/useSophieDIYQuery';
 
 export default function Projets() {

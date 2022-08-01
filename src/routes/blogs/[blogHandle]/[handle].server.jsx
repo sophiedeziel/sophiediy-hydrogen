@@ -1,5 +1,4 @@
-import {useRouteParams, useShopQuery} from '@shopify/hydrogen';
-import gql from 'graphql-tag';
+import {useRouteParams, useShopQuery, gql} from '@shopify/hydrogen';
 
 import Layout from '../../../components/Layout.server';
 import NotFound from '../../../components/NotFound.server';
