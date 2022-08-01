@@ -665,10 +665,10 @@
     "@shopify/cli-kit" "^3.0.24"
     "@shopify/plugin-ngrok" "^0.2.9"
 
-"@shopify/hydrogen@0.23.0":
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/@shopify/hydrogen/-/hydrogen-0.23.0.tgz#427d98b5afafef797d69f46fe90a029496f149fd"
-  integrity sha512-aajblIQdW0TbDoTVwdvVNuRmmUQ6DkurwSmQWTrHwszpQXMlFYGV8DPOAkTzIjaTqxYIt5ILYv8tV8qKiac9Tw==
+"@shopify/hydrogen@0.24.0":
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/@shopify/hydrogen/-/hydrogen-0.24.0.tgz#0e0d8b2beab15c15ca0a6ed525fb1a7cafc40ff4"
+  integrity sha512-pREwnsIILEJFTFtKKqqaBnNQzXGRBn0v0RzpveZCkuFfaYKA234TweuSIP4JCHTRLOpBrl6YPcWbBf33r6Y5JQ==
   dependencies:
     "@vitejs/plugin-react" "^1.3.0"
     abort-controller "^3.0.0"
