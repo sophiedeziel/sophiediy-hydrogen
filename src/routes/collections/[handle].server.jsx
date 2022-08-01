@@ -1,4 +1,10 @@
-import {useShop, useShopQuery, useSession, Seo, gql} from '@shopify/hydrogen';
+import {
+  useShop,
+  useShopQuery,
+  useLocalization,
+  Seo,
+  gql,
+} from '@shopify/hydrogen';
 
 import LoadMoreProducts from '../../components/LoadMoreProducts.client';
 import Layout from '../../components/Layout.server';
@@ -6,7 +12,9 @@ import ProductCard from '../../components/ProductCard';
 import NotFound from '../../components/NotFound.server';
 
 export default function Collection({collectionProductCount = 24, params}) {
-  const {countryCode = 'CA'} = useSession();
+  const {
+    country: {isoCode: countryCode},
+  } = useLocalization();
   const {languageCode} = useShop();
 
   const {handle} = params;

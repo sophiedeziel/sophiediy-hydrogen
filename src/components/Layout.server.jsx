@@ -1,8 +1,7 @@
 import {
-  useShop,
   useShopQuery,
+  useLocalization,
   flattenConnection,
-  LocalizationProvider,
   CacheLong,
   gql,
 } from '@shopify/hydrogen';
@@ -16,7 +15,9 @@ import {Suspense} from 'react';
  * A server component that defines a structure and organization of a page that can be used in different parts of the Hydrogen app
  */
 export default function Layout({children, hero}) {
-  const {languageCode} = useShop();
+  const {
+    language: {isoCode: languageCode},
+  } = useLocalization();
 
   const {data} = useShopQuery({
     query: QUERY,
@@ -33,7 +34,7 @@ export default function Layout({children, hero}) {
   const storeName = data ? data.shop.name : '';
 
   return (
-    <LocalizationProvider preload="*">
+    <>
       <div className="absolute top-0 left-0">
         <a
           href="#mainContent"
@@ -56,7 +57,7 @@ export default function Layout({children, hero}) {
         </main>
         <Footer collection={collections[0]} product={products[0]} />
       </div>
-    </LocalizationProvider>
+    </>
   );
 }
 

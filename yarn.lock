@@ -665,14 +665,15 @@
     "@shopify/cli-kit" "^3.0.24"
     "@shopify/plugin-ngrok" "^0.2.9"
 
-"@shopify/hydrogen@0.25.0":
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/@shopify/hydrogen/-/hydrogen-0.25.0.tgz#d247137956f381222310713edb1d1ab5f09dc90a"
-  integrity sha512-HS/UAFH9n7RDLtuDaP5qzKx/4reDpZsfjlV8zml1DBx6vz7K4dkAVWA792mXE2lr8KlOHC0anIMNJM3r4ThpAg==
+"@shopify/hydrogen@0.26.0":
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/@shopify/hydrogen/-/hydrogen-0.26.0.tgz#4eb5b9462ca54a4a19cc2027eef4bde08ff56819"
+  integrity sha512-tKmnk0w1no1UYl05Sm6/wi51sijKjjBUPhecXXvMEFG5aWYPRn9QPBarc1ExuhWxy2OTBsCZGBfi+usBkeostg==
   dependencies:
     "@vitejs/plugin-react" "^1.3.0"
     abort-controller "^3.0.0"
     body-parser "^1.20.0"
+    compression "^1.7.4"
     connect "^3.7.0"
     es-module-lexer "^0.10.0"
     fast-glob "^3.2.11"
@@ -685,6 +686,7 @@
     path-to-regexp "^6.2.0"
     react-error-boundary "^3.1.3"
     react-helmet-async "^1.2.3"
+    serve-static "^1.15.0"
     set-cookie-parser "^2.5.0"
     undici "^5.5.1"
     uuid "^8.3.2"

@@ -1,5 +1,6 @@
+import {useMemo} from 'react';
 import {useState, useCallback, Suspense} from 'react';
-import {useCountry, fetchSync} from '@shopify/hydrogen/client';
+import {useLocalization, fetchSync} from '@shopify/hydrogen';
 import {Listbox} from '@headlessui/react';
 import SpinnerIcon from './SpinnerIcon.client';
 
@@ -9,30 +10,51 @@ import SpinnerIcon from './SpinnerIcon.client';
 export default function CountrySelector() {
   const [listboxOpen, setListboxOpen] = useState(false);
 
-  const [selectedCountry] = useCountry();
+  const {
+    country: {isoCode},
+  } = useLocalization();
+  const currentCountry = useMemo(() => {
+    const regionNamesInEnglish = new Intl.DisplayNames(['en'], {
+      type: 'region',
+    });
 
-  const setSelectedCountry = useCallback(({isoCode, name}) => {
-    fetch(`/countries`, {
-      body: JSON.stringify({isoCode, name}),
-      method: 'POST',
-    })
-      .then(() => {
-        window.location.reload();
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
+    return {
+      name: regionNamesInEnglish.of(isoCode),
+      isoCode,
+    };
+  }, [isoCode]);
+
+  const setCountry = useCallback(
+    ({isoCode: newIsoCode}) => {
+      const currentPath = window.location.pathname;
+      let redirectPath;
+
+      if (newIsoCode !== 'US') {
+        if (currentCountry.isoCode === 'US') {
+          redirectPath = `/${newIsoCode.toLowerCase()}${currentPath}`;
+        } else {
+          redirectPath = `/${newIsoCode.toLowerCase()}${currentPath.substring(
+            currentPath.indexOf('/', 1),
+          )}`;
+        }
+      } else {
+        redirectPath = `${currentPath.substring(currentPath.indexOf('/', 1))}`;
+      }
+
+      window.location.href = redirectPath;
+    },
+    [currentCountry],
+  );
 
   return (
     <div className="hidden lg:block">
-      <Listbox onChange={setSelectedCountry}>
+      <Listbox onChange={setCountry}>
         {({open}) => {
           setTimeout(() => setListboxOpen(open));
           return (
             <>
               <Listbox.Button className="font-medium text-sm h-8 p-2 flex items-center">
-                <span className="mr-4">{selectedCountry.name}</span>
+                <span className="mr-4">{currentCountry.name}</span>
                 <ArrowIcon isOpen={open} />
               </Listbox.Button>
 
@@ -53,7 +75,7 @@ export default function CountrySelector() {
                       }
                     >
                       <Countries
-                        selectedCountry={selectedCountry}
+                        selectedCountry={currentCountry}
                         getClassName={(active) => {
                           return (
                             `w-36 py-2 px-3 flex justify-between items-center text-left cursor-pointer` +
@@ -73,11 +95,11 @@ export default function CountrySelector() {
   );
 }
 
-export function Countries({selectedCountry, getClassName}) {
+export function Countries({currentCountry, getClassName}) {
   const countries = fetchSync('/countries').json();
 
   return countries.map((country) => {
-    const isSelected = country.isoCode === selectedCountry.isoCode;
+    const isSelected = country.isoCode === currentCountry.isoCode;
     return (
       <Listbox.Option key={country.isoCode} value={country}>
         {({active}) => (

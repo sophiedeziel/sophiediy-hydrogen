@@ -1,5 +1,5 @@
-import {useState, Suspense} from 'react';
-import {useCountry} from '@shopify/hydrogen/client';
+import {useCallback, useState, Suspense} from 'react';
+import {useLocalization} from '@shopify/hydrogen';
 import {Listbox} from '@headlessui/react';
 import SpinnerIcon from './SpinnerIcon.client';
 
@@ -10,11 +10,20 @@ import {ArrowIcon, Countries} from './CountrySelector.client';
  */
 export default function MobileCountrySelector() {
   const [listboxOpen, setListboxOpen] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useCountry();
+  const {country: selectedCountry} = useLocalization();
+
+  const setCountry = useCallback(({isoCode, name}) => {
+    fetch(`/countries`, {
+      body: JSON.stringify({isoCode, name}),
+      method: 'POST',
+    }).then(() => {
+      window.location.reload();
+    });
+  }, []);
 
   return (
-    <div className="mt-8 border border-gray-200 w-full">
-      <Listbox onChange={setSelectedCountry}>
+    <div className="mt-8 rounded border border-gray-200 w-full">
+      <Listbox onChange={setCountry}>
         {({open}) => {
           setTimeout(() => setListboxOpen(open));
           return (
@@ -42,10 +51,8 @@ export default function MobileCountrySelector() {
                       selectedCountry={selectedCountry}
                       getClassName={(active) => {
                         return (
-                          `py-2 px-4 flex justify-between items-center text-left ` +
-                          `w-full cursor-pointer ${
-                            active ? 'bg-gray-100' : null
-                          }`
+                          `py-2 px-4 rounded flex justify-between items-center text-left w-full cursor-pointer` +
+                          `${active ? ' bg-gray-100' : ''}`
                         );
                       }}
                     />

@@ -1,7 +1,7 @@
 import {
   useShop,
   useShopQuery,
-  useSession,
+  useLocalization,
   Seo,
   useRouteParams,
   gql,
@@ -12,7 +12,9 @@ import NotFound from '../../components/NotFound.server';
 import Layout from '../../components/Layout.server';
 
 export default function Product() {
-  const {countryCode = 'US'} = useSession();
+  const {
+    country: {isoCode: countryCode},
+  } = useLocalization();
   const {handle} = useRouteParams();
 
   const {languageCode} = useShop();
