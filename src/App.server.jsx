@@ -7,7 +7,6 @@ import {
   ShopifyAnalytics,
   PerformanceMetrics,
   PerformanceMetricsDebug,
-  LocalizationProvider,
 } from '@shopify/hydrogen';
 import {Suspense} from 'react';
 import shopifyConfig from '../shopify.config';
@@ -22,22 +21,20 @@ function App({routes, request}) {
   const countryCode = localeMatch ? localeMatch[1] : null;
   return (
     <Suspense fallback={<LoadingFallback />}>
-      <ShopifyProvider shopifyConfig={shopifyConfig}>
-        <LocalizationProvider countryCode={countryCode}>
-          <ShopifyAnalytics cookieDomain="sophiediy.shop" />
-          <CartProvider>
-            <DefaultSeo />
-            <Router>
-              <FileRoutes
-                basePath={countryCode ? `/${countryCode}/` : null}
-                routes={routes}
-              />
-              <Route path="*" page={<NotFound />} />
-            </Router>
-          </CartProvider>
-          <PerformanceMetrics />
-          {process.env.LOCAL_DEV && <PerformanceMetricsDebug />}
-        </LocalizationProvider>
+      <ShopifyProvider shopifyConfig={shopifyConfig} countryCode={countryCode}>
+        <ShopifyAnalytics cookieDomain="sophiediy.shop" />
+        <CartProvider>
+          <DefaultSeo />
+          <Router>
+            <FileRoutes
+              basePath={countryCode ? `/${countryCode}/` : null}
+              routes={routes}
+            />
+            <Route path="*" page={<NotFound />} />
+          </Router>
+        </CartProvider>
+        <PerformanceMetrics />
+        {process.env.LOCAL_DEV && <PerformanceMetricsDebug />}
       </ShopifyProvider>
     </Suspense>
   );
