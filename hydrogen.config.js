@@ -1,14 +1,10 @@
-import {
-    defineConfig,
-    CookieSessionStorage,
-    PerformanceMetricsServerAnalyticsConnector,
-    ShopifyServerAnalyticsConnector,
-   } from '@shopify/hydrogen/config'
+import {defineConfig, CookieSessionStorage} from '@shopify/hydrogen/config';
 
 export default defineConfig({
   routes: '/src/routes',
   shopify: {
-    defaultLocale: 'fr',
+    defaultCountryCode: 'CA',
+    defaultLanguageCode: 'FR',
     storeDomain: 'sophie-diy.myshopify.com',
     storefrontToken: 'd4cc7a336fc5d79ffc83f30067f9d489',
     storefrontApiVersion: '2022-07',
@@ -20,8 +16,4 @@ export default defineConfig({
     sameSite: 'strict',
     maxAge: 60 * 60 * 24 * 30,
   }),
-  serverAnalyticsConnectors: [
-    PerformanceMetricsServerAnalyticsConnector,
-    ShopifyServerAnalyticsConnector,
-  ],
 });
