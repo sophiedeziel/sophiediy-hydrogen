@@ -23,7 +23,7 @@ function App({routes}) {
   return (
     <Suspense fallback={<LoadingFallback />}>
       <ShopifyProvider shopifyConfig={shopifyConfig}>
-        <ShopifyAnalytics />
+        <ShopifyAnalytics cookieDomain="sophiediy.shop" />
         <CartProvider>
           <DefaultSeo />
           <Router>
