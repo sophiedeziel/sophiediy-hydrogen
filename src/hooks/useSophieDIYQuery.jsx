@@ -4,8 +4,8 @@ export default function useSophieDIYQuery(query, variables = {}) {
   return useQuery(query, async () => {
     const response = await fetch(
       process.env.NODE_ENV == 'development'
-        ? 'https://sophiediy.herokuapp.com/graphql'
-        : 'https://sophiediy.herokuapp.com/graphql',
+        ? 'http://localhost:3100/graphql'
+        : 'https://sophiediy.onrender.com/graphql',
       {
         headers: {
           'content-type': 'application/json',
