@@ -24,6 +24,12 @@ export default function Projets() {
             <h2 className="w-full text-xl font-bold tracking-tight border border-gray-900 text-white bg-gray-900 p-4 hover:text-yellow-500">
               <Link to={'/projets/' + project.handle}>{project.title}</Link>
             </h2>
+            <div className="text-lg font-bold text-gray-900 p-4">
+              <span>
+                {project.twitchVideos.length} video
+                {project.twitchVideos.length > 1 ? 's' : ''}
+              </span>
+            </div>
             <div
               className="font-normal text-gray-800 p-4 prose"
               dangerouslySetInnerHTML={{__html: project.description}}
@@ -46,6 +52,9 @@ const QUERY = gql`
           title
           status
           descriptionRaw
+          twitchVideos {
+            id
+          }
         }
       }
     }

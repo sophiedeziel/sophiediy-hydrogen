@@ -1,9 +1,14 @@
 import {useRouteParams, gql} from '@shopify/hydrogen';
+import {Suspense} from 'react';
+import Moment from 'moment';
+import Twitch from '../../components/Twitch.client';
+
 import Layout from '../../components/Layout.server';
 
 import useSophieDIYQuery from '../../hooks/useSophieDIYQuery';
 
 export default function Project() {
+  Moment.locale('fr');
   const {handle} = useRouteParams();
 
   const {data} = useSophieDIYQuery(QUERY, {handle});
@@ -18,6 +23,16 @@ export default function Project() {
         dangerouslySetInnerHTML={{__html: project.description}}
         className="prose prose-md max-w-none leading-relaxed prose-stone"
       />
+      {project.twitchVideos.map((video) => (
+        <>
+          <h2 className="font-bold text-2xl md:text-3xl text-gray-900 mb-6 mt-6">
+            {Moment(video.streamStartedAt).calendar()}
+          </h2>
+          <Suspense fallback={null}>
+            <Twitch videoId={video.twitchId} />
+          </Suspense>
+        </>
+      ))}
     </Layout>
   );
 }
@@ -30,6 +45,11 @@ const QUERY = gql`
       description
       descriptionRaw
       handle
+      twitchVideos {
+        id
+        twitchId
+        streamStartedAt
+      }
     }
   }
 `;

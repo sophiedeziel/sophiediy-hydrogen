@@ -43,9 +43,10 @@
     "@shopify/hydrogen": "1.1.0",
     "body-parser": "^1.20.0",
     "compression": "^1.7.4",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-twitch-embed": "^2.1.0",
+    "react-twitch-embed": "^3.0.1",
     "serve-static": "^1.14.1"
   }
 }
