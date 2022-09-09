@@ -58,6 +58,7 @@ const QUERY = gql`
             }
             publishedAt
             onlineStoreUrl
+            handle
           }
         }
       }

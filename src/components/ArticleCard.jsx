@@ -4,7 +4,7 @@ import {Link} from '@shopify/hydrogen/client';
 export default function ArticleCard({article}) {
   return (
     <div className="text-md mb-4 bg-white relative">
-      <Link to={article.onlineStoreUrl.replace('https://sophiediy.shop', '')}>
+      <Link to={'/blogs/news/' + article.handle}>
         <div className="overflow-hidden">
           {article.image ? (
             <Image
