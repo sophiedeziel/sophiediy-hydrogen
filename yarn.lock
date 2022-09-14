@@ -532,7 +532,7 @@
     widest-line "^3.1.0"
     wrap-ansi "^7.0.0"
 
-"@oclif/core@^1.0", "@oclif/core@^1.2.0", "@oclif/core@^1.3.6":
+"@oclif/core@^1.2.0", "@oclif/core@^1.3.6":
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-1.13.0.tgz#65a0f6e2b4d939f654d484607b45e821146c40b5"
   integrity sha512-/cn36jfnjUxodiJZEGHtGKkUAD15qeHHBC/+FiPkKQYAvGtcht3XRL3wDidOkp3awotN6DzxhHOu5ZrDKowmTQ==
@@ -630,7 +630,7 @@
     typescript "^4.7.4"
     vite "^2.9.13"
 
-"@shopify/cli-kit@3.10.1", "@shopify/cli-kit@^3.0.0", "@shopify/cli-kit@^3.0.24":
+"@shopify/cli-kit@3.10.1":
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.10.1.tgz#deaf0ead4989ad4d7645a00b7f4b9cbeb8052993"
   integrity sha512-10Gbc57XofLHCeUpIFjyxiXCQwd+LTQAFyOVFSczYgM/CP2Dxq0BuP1rCcJIWOozBWMbXIPo3GLtqRr5Zs4Fzg==
@@ -689,17 +689,75 @@
     unique-string "^3.0.0"
     zod "^3.17.3"
 
-"@shopify/cli@3.0.24":
-  version "3.0.24"
-  resolved "https://registry.yarnpkg.com/@shopify/cli/-/cli-3.0.24.tgz#c2008c2511e911b951f3505f2fd80a0bc716dc46"
-  integrity sha512-1MrHLPde+J+yBtiQCP63KCFQHM2CuvL1ceIGJACUyZGAGgOFILUieWCndPyf4I8afnhnDyknVv7uwSsl+LPqUQ==
+"@shopify/cli-kit@3.11.0":
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.11.0.tgz#9da13ebcf381dce948118d465b53289a56cd5ed2"
+  integrity sha512-CtR8sMJdboG+L7IWA9FHve88j6hmchD/K/iJedkOb2IcOQQt83plswJ1Zr1magYlJfSr4A5k44kknaKzTANEXA==
   dependencies:
     "@bugsnag/js" "^7.16.7"
-    "@oclif/core" "^1.0"
+    "@iarna/toml" "^2.2.5"
+    "@oclif/core" "1.9.2"
+    "@types/archiver" "^5.3.1"
+    abort-controller "^3.0.0"
+    ansi-colors "^4.1.1"
+    archiver "^5.3.1"
+    change-case "^4.1.2"
+    color-json "^2.0.1"
+    commondir "^1.0.1"
+    conf "^10.1.2"
+    cross-zip "^4.0.0"
+    del "^6.0.0"
+    env-paths "^3.0.0"
+    envfile "^6.17.0"
+    execa "^6.0.0"
+    fast-glob "^3.2.11"
+    fastify "^4.2.1"
+    find-process "^1.4.7"
+    find-up "^6.2.0"
+    find-versions "^5.0.0"
+    form-data "^4.0.0"
+    fs-extra "^10.0.0"
+    fuzzy "^0.1.3"
+    get-port-please "^2.5.0"
+    graphql "^16.4.0"
+    graphql-request "^4.3.0"
+    inquirer "^8.2.4"
+    inquirer-autocomplete-prompt "^2.0.0"
+    is-interactive "^2.0.0"
+    js-yaml "^4.1.0"
+    keytar "^7.9.0"
+    kill-port-process "^3.1.0"
+    latest-version "^6.0.0"
+    liquidjs "^9.36.0"
+    listr2 "^4.0.5"
+    log-update "^4.0.0"
+    md5-file "^5.0.0"
+    node-fetch "^3.2.4"
+    open "^8.4.0"
+    pathe "0.2.0"
+    prettier "^2.7.1"
+    semver "^7.3.6"
+    simple-git "^3.5.0"
+    source-map-support "^0.5.21"
+    stacktracey "^2.1.8"
+    strip-ansi "^7.0.1"
+    tempy "^3.0.0"
+    term-size "^3.0.1"
+    terminal-link "^3.0.0"
+    ts-error "^1.0.6"
+    unique-string "^3.0.0"
+    zod "^3.17.3"
+
+"@shopify/cli@3.11.0":
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/@shopify/cli/-/cli-3.11.0.tgz#e1b1022bd234e25abfcf71703d6c0bdfd463378c"
+  integrity sha512-HUZ/ARPoJ3c3Y9BKLB76HDjQVbsFTtSjCBiLBu9dBNmf88d/d3je1bw+KbLs+puz72DtK4lty7QcHjM4zKqJ2A==
+  dependencies:
+    "@oclif/core" "1.9.2"
     "@oclif/plugin-help" "^5.1.12"
     "@oclif/plugin-plugins" "^2.1.0"
-    "@shopify/cli-kit" "^3.0.24"
-    "@shopify/plugin-ngrok" "^0.2.9"
+    "@shopify/cli-kit" "3.11.0"
+    "@shopify/plugin-ngrok" "^3.11.0"
 
 "@shopify/hydrogen@1.1.0":
   version "1.1.0"
@@ -792,13 +850,13 @@
   optionalDependencies:
     hpagent "^0.1.2"
 
-"@shopify/plugin-ngrok@^0.2.9":
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/@shopify/plugin-ngrok/-/plugin-ngrok-0.2.9.tgz#dbe01d5cd5b902df2f2bfbd58c33d8bbc780b297"
-  integrity sha512-u16d77BE2moGtA9K5iIPDJkQJJ6+5JHOFKYus1r3W1hGtBvVYgKaVdOWkWrt7fifyfKIQ9Q1emmuBn/9QePnMA==
+"@shopify/plugin-ngrok@^3.11.0":
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/@shopify/plugin-ngrok/-/plugin-ngrok-3.11.0.tgz#5f7c72b45a75025826107b40fbbb3f22a2267bc7"
+  integrity sha512-05/Ai+1wXNkaziRhj9Y7w93ASKgFTXT/5fdGw8nlwDMJM2eQsaE5/WT3kRnTbZTGnpBT/bkPerK0cve/UEh/QA==
   dependencies:
-    "@oclif/core" "^1.0"
-    "@shopify/cli-kit" "^3.0.0"
+    "@oclif/core" "1.9.2"
+    "@shopify/cli-kit" "3.11.0"
     "@shopify/ngrok" "^4.3.2"
 
 "@shopify/prettier-config@^1.1.2":
