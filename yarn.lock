@@ -774,10 +774,10 @@
     "@shopify/cli-kit" "3.14.0"
     "@shopify/plugin-ngrok" "^3.14.0"
 
-"@shopify/hydrogen@1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@shopify/hydrogen/-/hydrogen-1.4.2.tgz#e4a1ad961354a4c42e63870d38cfc662bb6e49b3"
-  integrity sha512-OXpXzLKhO3OKVOayOy1B8ydyIrbaHAuuVzpWc03QvGyjk2BPe4Tvvs2IS36YDM5wxKin4J250m9Xp9dg+35v2Q==
+"@shopify/hydrogen@1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@shopify/hydrogen/-/hydrogen-1.4.3.tgz#91e8a9df88e000110a1d525d92f0741236b16adb"
+  integrity sha512-YZY+0NbB2UMl7R+A9/IEpFNOmMJv5Fnadch4xiwFN/Ap9iX0u1pBDh/uP5XbGeILvN2UD0duEHDEtN0gimiAiQ==
   dependencies:
     "@vitejs/plugin-react" "^1.3.0"
     "@xstate/fsm" "^2.0.0"
