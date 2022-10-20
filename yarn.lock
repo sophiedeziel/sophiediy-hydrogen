@@ -750,17 +750,81 @@
     unique-string "^3.0.0"
     zod "^3.17.3"
 
-"@shopify/cli@3.18.0":
-  version "3.18.0"
-  resolved "https://registry.yarnpkg.com/@shopify/cli/-/cli-3.18.0.tgz#b0b8e1c8e261a766ce0d214f2cff24e1c388f310"
-  integrity sha512-qPOlQgw/XdvHFS0JUpk6dVsERf0jjhIglGL9TM3EXLdOHNj3f/5vA32G0kxAetcfo5eGCs+KbYeLzQSwe1sCCQ==
+"@shopify/cli-kit@3.19.0":
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.19.0.tgz#501d7d5889f40b7e64a5e3689f8ee996c3c995c8"
+  integrity sha512-qU/k5tANTUpHzUUldUprgPR6ywPPmysobYvCVT9EdrmccP1uTGNoeAjMIszQedlFiptys2jwEEJudI0/hzx4jQ==
+  dependencies:
+    "@bugsnag/js" "^7.16.7"
+    "@iarna/toml" "^2.2.5"
+    "@oclif/core" "1.9.2"
+    "@types/archiver" "^5.3.1"
+    abort-controller "^3.0.0"
+    archiver "^5.3.1"
+    chalk "^5.1.0"
+    chalk-animation "^2.0.3"
+    change-case "^4.1.2"
+    color-json "^2.0.1"
+    commondir "^1.0.1"
+    conf "^10.1.2"
+    cross-zip "^4.0.0"
+    deepmerge "4.2.2"
+    del "^6.0.0"
+    env-paths "^3.0.0"
+    envfile "^6.18.0"
+    execa "^6.0.0"
+    fast-glob "^3.2.11"
+    find-process "^1.4.7"
+    find-up "^6.2.0"
+    find-versions "^5.0.0"
+    form-data "^4.0.0"
+    fs-extra "^10.0.0"
+    fuzzy "^0.1.3"
+    get-port-please "^2.5.0"
+    graphql "^16.4.0"
+    graphql-request "^4.3.0"
+    h3 "^0.7.21"
+    ink "^3.2.0"
+    inquirer "^8.2.4"
+    inquirer-autocomplete-prompt "^2.0.0"
+    is-interactive "^2.0.0"
+    js-yaml "^4.1.0"
+    keytar "^7.9.0"
+    kill-port-process "^3.1.0"
+    latest-version "^6.0.0"
+    liquidjs "^9.36.0"
+    listr2 "^4.0.5"
+    log-update "^4.0.0"
+    macaddress "^0.5.3"
+    md5-file "^5.0.0"
+    node-fetch "^3.2.4"
+    open "^8.4.0"
+    pathe "0.2.0"
+    prettier "^2.7.1"
+    react "^17.0.2"
+    semver "^7.3.6"
+    simple-git "^3.5.0"
+    source-map-support "^0.5.21"
+    stacktracey "^2.1.8"
+    strip-ansi "^7.0.1"
+    tempy "^3.0.0"
+    term-size "^3.0.1"
+    terminal-link "^3.0.0"
+    ts-error "^1.0.6"
+    unique-string "^3.0.0"
+    zod "^3.17.3"
+
+"@shopify/cli@3.19.0":
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/@shopify/cli/-/cli-3.19.0.tgz#5510853b64910fdd9601b577e93257467c31c0ed"
+  integrity sha512-/NEHwF27DaW9rqEHwUTgosyTZBy2G98F1IbBTGd5lEvLjiLssXJQzCNBFd6jxQj8xJ8lKTNfX/6K+GpZEzWF4w==
   dependencies:
     "@oclif/core" "1.9.2"
     "@oclif/plugin-commands" "^2.2.0"
     "@oclif/plugin-help" "^5.1.12"
     "@oclif/plugin-plugins" "^2.1.0"
-    "@shopify/cli-kit" "3.18.0"
-    "@shopify/plugin-ngrok" "^3.18.0"
+    "@shopify/cli-kit" "3.19.0"
+    "@shopify/plugin-ngrok" "^3.19.0"
 
 "@shopify/hydrogen@1.5.0":
   version "1.5.0"
@@ -859,13 +923,13 @@
   optionalDependencies:
     hpagent "^0.1.2"
 
-"@shopify/plugin-ngrok@^3.18.0":
-  version "3.18.0"
-  resolved "https://registry.yarnpkg.com/@shopify/plugin-ngrok/-/plugin-ngrok-3.18.0.tgz#e01bb24259916cb9845b82c5780b9f59268f24d6"
-  integrity sha512-7ZNgCuAnIvDoQ79EVwcYg5t0ryvDyX1p+78J7RCWiJZU4F/qaNL+j1TcnntpO/QTHEweQ+TSKd/wvijHeHNPJQ==
+"@shopify/plugin-ngrok@^3.19.0":
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/@shopify/plugin-ngrok/-/plugin-ngrok-3.19.0.tgz#1427b453f1977c38b459d12a755aecc6dff543bb"
+  integrity sha512-Oebgm5T5+r90I56RXdM7y+W2q52/xnXcrRjYpTZP13htMQ+UFHbOYmCGZygzM7dgrokKBaBg3baCyD0aEKxFWQ==
   dependencies:
     "@oclif/core" "1.9.2"
-    "@shopify/cli-kit" "3.18.0"
+    "@shopify/cli-kit" "3.19.0"
     "@shopify/ngrok" "^4.3.2"
 
 "@shopify/prettier-config@^1.1.2":
