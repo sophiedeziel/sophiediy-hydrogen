@@ -668,13 +668,13 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@shopify/cli-hydrogen@3.18.0":
-  version "3.18.0"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.18.0.tgz#8e3d2bfef17022b30830f36f6f46aa2e621d4af7"
-  integrity sha512-t4V2IX26JwTjx5tvC6jFVJ8bipSbduyNUMnRtuSZ38wlq1OgauQu+/u29Z1rwh1Ygq9lc4eeybMoQdC+pMNx6Q==
+"@shopify/cli-hydrogen@3.22.1":
+  version "3.22.1"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.22.1.tgz#dda66b0192f88d650db5a0b72f533f8847c2a6f3"
+  integrity sha512-fBAuGd9mOT+n7HTAxn+LPHhSsqXkKdgMhuZD6Z3jeQ+MV5kDR+qhLo1re0YvN05G2fND8FgMoStjJxB9z4eiDA==
   dependencies:
     "@oclif/core" "1.9.2"
-    "@shopify/cli-kit" "3.18.0"
+    "@shopify/cli-kit" "3.22.1"
     "@shopify/hydrogen" "^0.26.0"
     "@shopify/mini-oxygen" "^0.2.0"
     "@shopify/prettier-config" "^1.1.2"
@@ -683,7 +683,7 @@
     fs-extra "^10.0.0"
     graphql-request "^4.3.0"
     prettier "^2.6.1"
-    typescript "^4.7.4"
+    typescript "^4.8.4"
     vite "^2.9.13"
 
 "@shopify/cli-kit@3.18.0":
@@ -725,6 +725,69 @@
     inquirer-autocomplete-prompt "^2.0.0"
     is-interactive "^2.0.0"
     js-yaml "^4.1.0"
+    keytar "^7.9.0"
+    kill-port-process "^3.1.0"
+    latest-version "^6.0.0"
+    liquidjs "^9.36.0"
+    listr2 "^4.0.5"
+    log-update "^4.0.0"
+    macaddress "^0.5.3"
+    md5-file "^5.0.0"
+    node-fetch "^3.2.4"
+    open "^8.4.0"
+    pathe "0.2.0"
+    prettier "^2.7.1"
+    react "^17.0.2"
+    semver "^7.3.6"
+    simple-git "^3.5.0"
+    source-map-support "^0.5.21"
+    stacktracey "^2.1.8"
+    strip-ansi "^7.0.1"
+    tempy "^3.0.0"
+    term-size "^3.0.1"
+    terminal-link "^3.0.0"
+    ts-error "^1.0.6"
+    unique-string "^3.0.0"
+    zod "^3.17.3"
+
+"@shopify/cli-kit@3.22.1":
+  version "3.22.1"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.22.1.tgz#846ec071f24917f04521fdd1b344cd9dffc7f921"
+  integrity sha512-q/c4pU6NUvdUU+bTnCiYMakPI8VdDc3+YaEdlpmBUb6jUJcig0tEHh29VHWDsmJRfgaGD97sblGUb+VOaTb1oQ==
+  dependencies:
+    "@bugsnag/js" "^7.16.7"
+    "@iarna/toml" "^2.2.5"
+    "@oclif/core" "1.9.2"
+    "@types/archiver" "^5.3.1"
+    abort-controller "^3.0.0"
+    archiver "^5.3.1"
+    chalk "^5.1.0"
+    chalk-animation "^2.0.3"
+    change-case "^4.1.2"
+    color-json "^2.0.1"
+    commondir "^1.0.1"
+    conf "^10.1.2"
+    cross-zip "^4.0.0"
+    deepmerge "4.2.2"
+    del "^6.0.0"
+    env-paths "^3.0.0"
+    envfile "^6.18.0"
+    execa "^6.0.0"
+    fast-glob "^3.2.11"
+    find-process "^1.4.7"
+    find-up "^6.2.0"
+    find-versions "^5.0.0"
+    form-data "^4.0.0"
+    fs-extra "^10.0.0"
+    fuzzy "^0.1.3"
+    get-port-please "^2.5.0"
+    graphql "^16.4.0"
+    graphql-request "^4.3.0"
+    h3 "^0.7.21"
+    ink "^3.2.0"
+    inquirer "^8.2.4"
+    inquirer-autocomplete-prompt "^2.0.0"
+    is-interactive "^2.0.0"
     keytar "^7.9.0"
     kill-port-process "^3.1.0"
     latest-version "^6.0.0"
@@ -6741,10 +6804,10 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typescript@^4.7.2, typescript@^4.7.4:
-  version "4.7.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
-  integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
+typescript@^4.7.2, typescript@^4.8.4:
+  version "4.8.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.4.tgz#c464abca159669597be5f96b8943500b238e60e6"
+  integrity sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==
 
 ufo@^0.7.10:
   version "0.7.11"
