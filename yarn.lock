@@ -2947,10 +2947,10 @@ eslint-plugin-eslint-comments@^3.2.0:
     escape-string-regexp "^1.0.5"
     ignore "^5.0.5"
 
-eslint-plugin-hydrogen@^0.12.2:
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-hydrogen/-/eslint-plugin-hydrogen-0.12.2.tgz#e0bcd6acd280f38fee12a107a01296ed292a5f48"
-  integrity sha512-lOSvBbyUsJ7f2ljcdK/PHDqO5Woe1E1C4S56an9vCh0LMWa25FCTzu6YGzA9O5yu/gipn3nRZuuUvTPYPNtOPw==
+eslint-plugin-hydrogen@^0.12.3:
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-hydrogen/-/eslint-plugin-hydrogen-0.12.3.tgz#c377e44b07bd0620e284a04f74abdf633c9ecbd3"
+  integrity sha512-DE9unAT6ho24w8vLhbEV99n2sZQEX7gKUwnms6sNczpj6d4furkThin/E0uHpnOxAmD6YWKn/mkofPXJeFrn5g==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.26.0"
     "@typescript-eslint/experimental-utils" "^5.26.0"
