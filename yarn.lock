@@ -746,13 +746,13 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@shopify/cli-hydrogen@3.29.0":
-  version "3.29.0"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.29.0.tgz#ab0bcd81e5c76263852b54e22485d7d067d69fb7"
-  integrity sha512-0l0a8U6cjMf2VfwGVdxWli9kPw0XeRfc1PaTpwxjKxOQAeP8PQEeDgtcIN5QWHUzIRZH0zk/5MOtbxEniTEeLQ==
+"@shopify/cli-hydrogen@3.31.0":
+  version "3.31.0"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.31.0.tgz#78fe9b9f466462220c0665f895388d424b96c6ca"
+  integrity sha512-nmda38KGsa307M6QydbDjqP8WsKuvPE58QfNkUrIGBurcnFjHUuaqxdn4Jgg/h2DXOQXlYHmFOsKd7D0u1NN7w==
   dependencies:
     "@oclif/core" "1.21.0"
-    "@shopify/cli-kit" "3.29.0"
+    "@shopify/cli-kit" "3.31.0"
     "@shopify/hydrogen" "0.26.0"
     "@shopify/mini-oxygen" "0.2.0"
     "@shopify/prettier-config" "1.1.2"
@@ -764,10 +764,10 @@
     typescript "4.8.4"
     vite "2.9.13"
 
-"@shopify/cli-kit@3.29.0":
-  version "3.29.0"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.29.0.tgz#2a8781712c1ca668bb4edf352e5370dafb9bd39a"
-  integrity sha512-QQFmNDnur0m23fmpolTPtkSweY8OrPzPYqTVyIHAyAT+nOTcnLnZO0nm6f+kmZ231kZlXe3wIa4m1r+CBZGWbw==
+"@shopify/cli-kit@3.30.2":
+  version "3.30.2"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.30.2.tgz#ec0309dd0bb0f370814d4a1473de4f87c5f8cc40"
+  integrity sha512-88QyQQu44jQ96Ls7HtdjD9vAEKS+22Ljt+uBD9RiQEpjdexoDjX9lsV0JfrT0I7aOEs/4Z42ZPMKeBsdWRA/iA==
   dependencies:
     "@bugsnag/js" "7.16.7"
     "@iarna/toml" "2.2.5"
@@ -808,7 +808,7 @@
     latest-version "6.0.0"
     liquidjs "9.36.0"
     listr2 "4.0.5"
-    lodash-es "4.17.21"
+    lodash "4.17.21"
     log-update "4.0.0"
     macaddress "0.5.3"
     md5-file "5.0.0"
@@ -830,10 +830,10 @@
     unique-string "3.0.0"
     zod "3.17.3"
 
-"@shopify/cli-kit@3.30.2":
-  version "3.30.2"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.30.2.tgz#ec0309dd0bb0f370814d4a1473de4f87c5f8cc40"
-  integrity sha512-88QyQQu44jQ96Ls7HtdjD9vAEKS+22Ljt+uBD9RiQEpjdexoDjX9lsV0JfrT0I7aOEs/4Z42ZPMKeBsdWRA/iA==
+"@shopify/cli-kit@3.31.0":
+  version "3.31.0"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.31.0.tgz#377afa0c609d54bf4e0e7f8d630cce74f7f53dd6"
+  integrity sha512-sJYZ7AqcKcd/7SPlNhXNB5eLVgusfo17RU37HzCz/QpkxBovRY+371jigOX4aOUCPQD6gAIjNNoDO/spv+xChg==
   dependencies:
     "@bugsnag/js" "7.16.7"
     "@iarna/toml" "2.2.5"
@@ -842,7 +842,6 @@
     abort-controller "3.0.0"
     archiver "5.3.1"
     chalk "5.1.0"
-    chalk-animation "2.0.3"
     change-case "4.1.2"
     color-json "2.0.1"
     commondir "1.0.1"
@@ -861,6 +860,7 @@
     fs-extra "10.0.0"
     fuzzy "0.1.3"
     get-port-please "2.5.0"
+    gradient-string "2.0.2"
     graphql "16.4.0"
     graphql-request "4.3.0"
     h3 "0.7.21"
@@ -3784,7 +3784,7 @@ graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0,
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
   integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
 
-gradient-string@^2.0.2:
+gradient-string@2.0.2, gradient-string@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/gradient-string/-/gradient-string-2.0.2.tgz#a90402618990ec993ecbb72a56bd7e6598f45c0e"
   integrity sha512-rEDCuqUQ4tbD78TpzsMtt5OIf0cBCSDWSJtUDaF6JsAh+k0v9r++NzxNEG87oDZx9ZwGhD8DaezR2L/yrw0Jdw==
@@ -4613,11 +4613,6 @@ locate-path@^7.0.0:
   integrity sha512-vJXaRMJgRVD3+cUZs3Mncj2mxpt5mP0EmNOsxRSZRMlbqjvxzDEOIUWXGmavo0ZC9+tNZCBLQ66reA11nbpHZg==
   dependencies:
     p-locate "^6.0.0"
-
-lodash-es@4.17.21:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
-  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.castarray@^4.4.0:
   version "4.4.0"
