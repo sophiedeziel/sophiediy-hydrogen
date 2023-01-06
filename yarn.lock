@@ -830,10 +830,10 @@
     unique-string "3.0.0"
     zod "3.17.3"
 
-"@shopify/cli-kit@3.30.2":
-  version "3.30.2"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.30.2.tgz#ec0309dd0bb0f370814d4a1473de4f87c5f8cc40"
-  integrity sha512-88QyQQu44jQ96Ls7HtdjD9vAEKS+22Ljt+uBD9RiQEpjdexoDjX9lsV0JfrT0I7aOEs/4Z42ZPMKeBsdWRA/iA==
+"@shopify/cli-kit@3.31.1":
+  version "3.31.1"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.31.1.tgz#b7d5fae5c5fdabf313f5512061b11545f51c5f6b"
+  integrity sha512-txmMu9885hUUEFnQIN1og0s6uPxXNoJmCCn67/NsIsvynKWJwUypOgv7Cz/b/fb7QGbvoUQXfhL1nZJWCEiz0w==
   dependencies:
     "@bugsnag/js" "7.16.7"
     "@iarna/toml" "2.2.5"
@@ -842,7 +842,6 @@
     abort-controller "3.0.0"
     archiver "5.3.1"
     chalk "5.1.0"
-    chalk-animation "2.0.3"
     change-case "4.1.2"
     color-json "2.0.1"
     commondir "1.0.1"
@@ -858,9 +857,10 @@
     find-up "6.2.0"
     find-versions "5.0.0"
     form-data "4.0.0"
-    fs-extra "10.0.0"
+    fs-extra "11.1.0"
     fuzzy "0.1.3"
     get-port-please "2.5.0"
+    gradient-string "2.0.2"
     graphql "16.4.0"
     graphql-request "4.3.0"
     h3 "0.7.21"
@@ -896,17 +896,17 @@
     unique-string "3.0.0"
     zod "3.17.3"
 
-"@shopify/cli@3.30.2":
-  version "3.30.2"
-  resolved "https://registry.yarnpkg.com/@shopify/cli/-/cli-3.30.2.tgz#e9aee3fc95d0bd179382cb2b9eb61a05661ccea9"
-  integrity sha512-d2WoSmcYAcZSob0KKnKof2mUvj1RFRVETm10dchHp7Om/XoSMc7UM/+y/yzcfvIhXyfKzNCgmU1GgqDJT6LF+Q==
+"@shopify/cli@3.31.1":
+  version "3.31.1"
+  resolved "https://registry.yarnpkg.com/@shopify/cli/-/cli-3.31.1.tgz#20851c032fdc4dca3689acee88a80100a91e570e"
+  integrity sha512-6T+Mr7lEusleSDHPh/YvHn+M3dPMHeTnhsHnahDGAEFjF4IjpWfEtOGMtcXMhcbrHRyXaZpKApRuMk/RqxoPQQ==
   dependencies:
     "@oclif/core" "1.21.0"
     "@oclif/plugin-commands" "2.2.0"
     "@oclif/plugin-help" "5.1.12"
     "@oclif/plugin-plugins" "2.1.0"
-    "@shopify/cli-kit" "3.30.2"
-    "@shopify/plugin-ngrok" "3.30.2"
+    "@shopify/cli-kit" "3.31.1"
+    "@shopify/plugin-ngrok" "3.31.1"
 
 "@shopify/hydrogen@0.26.0":
   version "0.26.0"
@@ -1005,13 +1005,13 @@
   optionalDependencies:
     hpagent "^0.1.2"
 
-"@shopify/plugin-ngrok@3.30.2":
-  version "3.30.2"
-  resolved "https://registry.yarnpkg.com/@shopify/plugin-ngrok/-/plugin-ngrok-3.30.2.tgz#1777e0690db6b63fedaa355a67bba37469b4cfb0"
-  integrity sha512-q92yrh1FIR6+qBgz8q7Z0KEPunGZDrGS4N8Wn161t+/ZMLrf0YQlG9aajCIt7sFGCXQQnZSPBrOLHy2FzNPU7w==
+"@shopify/plugin-ngrok@3.31.1":
+  version "3.31.1"
+  resolved "https://registry.yarnpkg.com/@shopify/plugin-ngrok/-/plugin-ngrok-3.31.1.tgz#e24fed3bffd5b63522c9efcda4cb0e2d0b490975"
+  integrity sha512-LlW3FMvdWVQOjB2KZezMubul86UTTjp2tGNlF/Ug2+LDAEUO+1HvCFhw4pAtENRp/wyV3njRSw2rlzohZ+jjCQ==
   dependencies:
     "@oclif/core" "1.21.0"
-    "@shopify/cli-kit" "3.30.2"
+    "@shopify/cli-kit" "3.31.1"
     "@shopify/ngrok" "4.3.2"
 
 "@shopify/prettier-config@1.1.2", "@shopify/prettier-config@^1.1.2":
@@ -3510,6 +3510,15 @@ fs-extra@10.0.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
+fs-extra@11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.1.0.tgz#5784b102104433bb0e090f48bfc4a30742c357ed"
+  integrity sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
+
 fs-extra@^10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
@@ -3784,7 +3793,7 @@ graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0,
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
   integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
 
-gradient-string@^2.0.2:
+gradient-string@2.0.2, gradient-string@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/gradient-string/-/gradient-string-2.0.2.tgz#a90402618990ec993ecbb72a56bd7e6598f45c0e"
   integrity sha512-rEDCuqUQ4tbD78TpzsMtt5OIf0cBCSDWSJtUDaF6JsAh+k0v9r++NzxNEG87oDZx9ZwGhD8DaezR2L/yrw0Jdw==
