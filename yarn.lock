@@ -761,13 +761,13 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@shopify/cli-hydrogen@3.32.0":
-  version "3.32.0"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.32.0.tgz#cb9828895b2002186bbe22f5bba9150d8de7b71e"
-  integrity sha512-96gnev5uiZ7kQzusxn0irZt2Jb/OhqSnfD0PA8D83EwKg3dw81KE+GubaUgujibZGLySBGTSThG1KsYfwD8p+A==
+"@shopify/cli-hydrogen@3.32.1":
+  version "3.32.1"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.32.1.tgz#dd66d5e0e5558a8823c629284b4340b94b545842"
+  integrity sha512-nSw72vl74GPjwJJHPYwhLtpXaneZNkMvqMF6fw8RouS5rUh6QGGEGbxTrCY6oyzGJxLnE9jWyg3twaK4YBOrAw==
   dependencies:
     "@oclif/core" "1.21.0"
-    "@shopify/cli-kit" "3.32.0"
+    "@shopify/cli-kit" "3.32.1"
     "@shopify/hydrogen" "0.26.0"
     "@shopify/mini-oxygen" "0.2.0"
     "@shopify/prettier-config" "1.1.2"
@@ -845,16 +845,17 @@
     unique-string "3.0.0"
     zod "3.17.3"
 
-"@shopify/cli-kit@3.32.0":
-  version "3.32.0"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.32.0.tgz#4bd1f9d0491b862790586fc98ecd8d0d8bd02f6a"
-  integrity sha512-SuA6BgDZ6HXhItwxVIt83RwTQf6pF472hb+7PRYgEzgAjusJMD2YCPHoReQDd1OAlkx+NwAyvVQw9sZm1zWlcg==
+"@shopify/cli-kit@3.32.1":
+  version "3.32.1"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.32.1.tgz#fd76bf6c35e24545b97c802ba7d69a0d8dd6d21e"
+  integrity sha512-tNTpWbNE3u0GyxVDDeHde9Pakg/o3OHR5DbEyCuksiX52ix3VV+2SOM0wjWg9pfGfFVRUgrNjBz4T3zQJB77zQ==
   dependencies:
     "@bugsnag/js" "7.16.7"
     "@iarna/toml" "2.2.5"
     "@oclif/core" "1.21.0"
     "@types/archiver" "5.3.1"
     abort-controller "3.0.0"
+    ansi-escapes "6.0.0"
     archiver "5.3.1"
     chalk "5.1.0"
     change-case "4.1.2"
@@ -1416,6 +1417,13 @@ ajv@^8.0.0, ajv@^8.0.1, ajv@^8.6.3:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
+ansi-escapes@6.0.0, ansi-escapes@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-6.0.0.tgz#68c580e87a489f6df3d761028bb93093fde6bd8a"
+  integrity sha512-IG23inYII3dWlU2EyiAiGj6Bwal5GzsgPMwjYGvc1HPE2dgbj4ZB5ToWBKSquKw74nB3TIuOwaI6/jSULzfgrw==
+  dependencies:
+    type-fest "^3.0.0"
+
 ansi-escapes@^3.1.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.2.0.tgz#8780b98ff9dbf5638152d1f1fe5c1d7b4442976b"
@@ -1434,13 +1442,6 @@ ansi-escapes@^5.0.0:
   integrity sha512-5GFMVX8HqE/TB+FuBJGuO5XG0WrsA6ptUqoODaT/n9mmUaZFkqnBueB4leqGBCmrUHnCnC4PCZTCd0E7QQ83bA==
   dependencies:
     type-fest "^1.0.2"
-
-ansi-escapes@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-6.0.0.tgz#68c580e87a489f6df3d761028bb93093fde6bd8a"
-  integrity sha512-IG23inYII3dWlU2EyiAiGj6Bwal5GzsgPMwjYGvc1HPE2dgbj4ZB5ToWBKSquKw74nB3TIuOwaI6/jSULzfgrw==
-  dependencies:
-    type-fest "^3.0.0"
 
 ansi-regex@^2.0.0:
   version "2.1.1"
