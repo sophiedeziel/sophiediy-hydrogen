@@ -761,13 +761,13 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@shopify/cli-hydrogen@3.33.0":
-  version "3.33.0"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.33.0.tgz#4172fb8b16056922737e7677be763ff051e18643"
-  integrity sha512-XFOqKQYBtH6vgTXdbKO5XhLtWRVHtUSlNbBcDqJMIpY0USwc7wMb7RyW1K2vS0aOUzQHd/GHFczcm9oFf8e6zg==
+"@shopify/cli-hydrogen@3.36.1":
+  version "3.36.1"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.36.1.tgz#d61c29252b066e0c2aa490e865bd96a4485ed029"
+  integrity sha512-VVZFaK00Tpc5G/5CRW+kJHxgIGtVkWq7EUg73THvf1OCa+6ilPRY1w0F3g8g4+POw50+imVgWOTanP68v0YFVQ==
   dependencies:
     "@oclif/core" "1.21.0"
-    "@shopify/cli-kit" "3.33.0"
+    "@shopify/cli-kit" "3.36.1"
     "@shopify/hydrogen" "0.26.0"
     "@shopify/mini-oxygen" "0.2.0"
     "@shopify/prettier-config" "1.1.2"
@@ -779,10 +779,10 @@
     typescript "4.8.4"
     vite "2.9.13"
 
-"@shopify/cli-kit@3.33.0":
-  version "3.33.0"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.33.0.tgz#1be60ce79c2a921d7f3147cf6cb4846e03067309"
-  integrity sha512-FA9+OGPmE0qwKjFmJRFWunr9kCQ5rxBMUwim8DVl8UYjtB5IkyRG+u1qGlwCfSeZ3zVeGUxdIeZwTDgH/FwafQ==
+"@shopify/cli-kit@3.34.0":
+  version "3.34.0"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.34.0.tgz#b0133ef615a39355ace871b6fc6a8df81d421572"
+  integrity sha512-y0rtsRm3m5FNqfx/AU45t86fqi7g0l3j2CU+H7tQ7WUyM/HZbyr3EYt5QN7vJN8QGGouhqmcBOmAgxiCAlnHAQ==
   dependencies:
     "@bugsnag/js" "7.16.7"
     "@iarna/toml" "2.2.5"
@@ -830,7 +830,7 @@
     node-abort-controller "3.0.1"
     node-fetch "3.2.4"
     open "8.4.0"
-    pathe "0.2.0"
+    pathe "1.0.0"
     prettier "2.7.1"
     react "17.0.2"
     semver "7.3.6"
@@ -846,10 +846,10 @@
     unique-string "3.0.0"
     zod "3.17.3"
 
-"@shopify/cli-kit@3.34.0":
-  version "3.34.0"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.34.0.tgz#b0133ef615a39355ace871b6fc6a8df81d421572"
-  integrity sha512-y0rtsRm3m5FNqfx/AU45t86fqi7g0l3j2CU+H7tQ7WUyM/HZbyr3EYt5QN7vJN8QGGouhqmcBOmAgxiCAlnHAQ==
+"@shopify/cli-kit@3.36.1":
+  version "3.36.1"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.36.1.tgz#687edbad780d2a89de3e7a56195404548439b876"
+  integrity sha512-WRYoLEzQLWg2QVHzTCDxeRkLVq1NiaHiweBoa6gzzdqK5OjmHfxfoqUUIG6vNTlwqPL10kEl6jrW7IQwdeWDCA==
   dependencies:
     "@bugsnag/js" "7.16.7"
     "@iarna/toml" "2.2.5"
@@ -870,6 +870,7 @@
     envfile "6.18.0"
     execa "6.0.0"
     fast-glob "3.2.11"
+    figures "5.0.0"
     find-process "1.4.7"
     find-up "6.2.0"
     find-versions "5.0.0"
@@ -882,8 +883,6 @@
     graphql-request "4.3.0"
     h3 "0.7.21"
     ink "3.2.0"
-    inquirer "9.1.4"
-    inquirer-autocomplete-prompt "3.0.0"
     is-interactive "2.0.0"
     js-yaml "4.1.0"
     keytar "7.9.0"
@@ -3252,18 +3251,18 @@ fetch-blob@^3.1.2, fetch-blob@^3.1.4:
     node-domexception "^1.0.0"
     web-streams-polyfill "^3.0.3"
 
-figures@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/figures/-/figures-4.0.1.tgz#27b26609907bc888b3e3b0ef5403643f80aa2518"
-  integrity sha512-rElJwkA/xS04Vfg+CaZodpso7VqBknOYbzi6I76hI4X80RUjkSxO2oAyPmGbuXUppywjqndOrQDl817hDnI++w==
+figures@5.0.0, figures@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/figures/-/figures-5.0.0.tgz#126cd055052dea699f8a54e8c9450e6ecfc44d5f"
+  integrity sha512-ej8ksPF4x6e5wvK9yevct0UCXh8TTFlWGVLlgjZuoBH1HwjIfKE/IdL5mq89sFA7zELi1VhKpmtDnrs7zWyeyg==
   dependencies:
     escape-string-regexp "^5.0.0"
     is-unicode-supported "^1.2.0"
 
-figures@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/figures/-/figures-5.0.0.tgz#126cd055052dea699f8a54e8c9450e6ecfc44d5f"
-  integrity sha512-ej8ksPF4x6e5wvK9yevct0UCXh8TTFlWGVLlgjZuoBH1HwjIfKE/IdL5mq89sFA7zELi1VhKpmtDnrs7zWyeyg==
+figures@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/figures/-/figures-4.0.1.tgz#27b26609907bc888b3e3b0ef5403643f80aa2518"
+  integrity sha512-rElJwkA/xS04Vfg+CaZodpso7VqBknOYbzi6I76hI4X80RUjkSxO2oAyPmGbuXUppywjqndOrQDl817hDnI++w==
   dependencies:
     escape-string-regexp "^5.0.0"
     is-unicode-supported "^1.2.0"
@@ -5330,15 +5329,15 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-pathe@0.2.0, pathe@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/pathe/-/pathe-0.2.0.tgz#30fd7bbe0a0d91f0e60bae621f5d19e9e225c339"
-  integrity sha512-sTitTPYnn23esFR3RlqYBWn4c45WGeLcsKzQiUpXJAyfcWkolvlYpV8FLo7JishK946oQwMFUCHXQ9AjGPKExw==
-
 pathe@1.0.0, pathe@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/pathe/-/pathe-1.0.0.tgz#135fc11464fc57c84ef93d5c5ed21247e24571df"
   integrity sha512-nPdMG0Pd09HuSsr7QOKUXO2Jr9eqaDiZvDwdyIhNG5SHYujkQHYKDfGQkulBxvbDHz8oHLsTgKN86LSwYzSHAg==
+
+pathe@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/pathe/-/pathe-0.2.0.tgz#30fd7bbe0a0d91f0e60bae621f5d19e9e225c339"
+  integrity sha512-sTitTPYnn23esFR3RlqYBWn4c45WGeLcsKzQiUpXJAyfcWkolvlYpV8FLo7JishK946oQwMFUCHXQ9AjGPKExw==
 
 pathval@^1.1.1:
   version "1.1.1"
