@@ -761,13 +761,13 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@shopify/cli-hydrogen@3.36.1":
-  version "3.36.1"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.36.1.tgz#d61c29252b066e0c2aa490e865bd96a4485ed029"
-  integrity sha512-VVZFaK00Tpc5G/5CRW+kJHxgIGtVkWq7EUg73THvf1OCa+6ilPRY1w0F3g8g4+POw50+imVgWOTanP68v0YFVQ==
+"@shopify/cli-hydrogen@3.36.2":
+  version "3.36.2"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-hydrogen/-/cli-hydrogen-3.36.2.tgz#3a79418fee0e7e7570631e7dbbd6687b1be5fc29"
+  integrity sha512-3nQUIoNnZTXmCuKVa6ZJXO4HVNC4zH2SE8v4NeFSFmRdEpelgTWLS6ktsFCqkBt++HEmsEZjR0NydNJ3LS42KA==
   dependencies:
     "@oclif/core" "1.21.0"
-    "@shopify/cli-kit" "3.36.1"
+    "@shopify/cli-kit" "3.36.2"
     "@shopify/hydrogen" "0.26.0"
     "@shopify/mini-oxygen" "0.2.0"
     "@shopify/prettier-config" "1.1.2"
@@ -846,10 +846,10 @@
     unique-string "3.0.0"
     zod "3.17.3"
 
-"@shopify/cli-kit@3.36.1":
-  version "3.36.1"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.36.1.tgz#687edbad780d2a89de3e7a56195404548439b876"
-  integrity sha512-WRYoLEzQLWg2QVHzTCDxeRkLVq1NiaHiweBoa6gzzdqK5OjmHfxfoqUUIG6vNTlwqPL10kEl6jrW7IQwdeWDCA==
+"@shopify/cli-kit@3.36.2":
+  version "3.36.2"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.36.2.tgz#a347773198bd672db1b73c840ab0e0cf084e06f0"
+  integrity sha512-r52l4qZTcsi9bgqbQB90fwLoVKXXJqn6JzmWHJdinvd4Nh5a7KeHPnfi23tM6s9JzrbzXXInWMrlO+NzVIelXQ==
   dependencies:
     "@bugsnag/js" "7.16.7"
     "@iarna/toml" "2.2.5"
