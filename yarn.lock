@@ -952,10 +952,10 @@
     web-streams-polyfill "^3.2.0"
     worktop "^0.7.3"
 
-"@shopify/hydrogen@1.6.5":
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/@shopify/hydrogen/-/hydrogen-1.6.5.tgz#2fdc2ea970be8b014a564aea283ed98d72302ceb"
-  integrity sha512-9z9T3wLdE7ZUxpFHJkJFMEQOla3MsXEMjm/2RB+oVaGBuu61XL+rdPq0Z9IA4w1cGj8eTe+8d4/I+Z91nN3Jjw==
+"@shopify/hydrogen@1.6.6":
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/@shopify/hydrogen/-/hydrogen-1.6.6.tgz#61fa87cc3e350733d149d7b9f2a5b61fe884f4e1"
+  integrity sha512-6cns3d9zU7T9zaNLU4dKVb2zcFvMjtaEIOU7r1mWOjoJnb5siMOX1/WaQySQb4TIdrZnLTbOdO5imHKyUQgZWA==
   dependencies:
     "@vitejs/plugin-react" "^1.3.0"
     "@xstate/fsm" "^2.0.0"
