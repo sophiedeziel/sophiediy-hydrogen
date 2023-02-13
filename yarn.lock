@@ -844,10 +844,10 @@
     unique-string "3.0.0"
     zod "3.17.3"
 
-"@shopify/cli-kit@3.42.0":
-  version "3.42.0"
-  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.42.0.tgz#39b81189fb3c516939c4a1d7f90f3c621056fac8"
-  integrity sha512-sTJt4A1o4fQc9rwmF2EKkfMAAyVaeiHcN3ejDR/FPVMGrHF3tjZ7hCKssvN89y2bNzqgD6vE8XucMSjftdDI9A==
+"@shopify/cli-kit@3.43.0":
+  version "3.43.0"
+  resolved "https://registry.yarnpkg.com/@shopify/cli-kit/-/cli-kit-3.43.0.tgz#f82998cf7a0cea077334bc2fca88b19248ac238d"
+  integrity sha512-33iGO0C8Idu6o54GZNYKgEdsbId7VCdfAAZnQdRZBH+nAwNdKADclYfDFJAX38fp5rBMqRuLT5i4NfNWNpG4EQ==
   dependencies:
     "@bugsnag/js" "7.16.7"
     "@iarna/toml" "2.2.5"
@@ -909,16 +909,16 @@
     unique-string "3.0.0"
     zod "3.17.3"
 
-"@shopify/cli@3.42.0":
-  version "3.42.0"
-  resolved "https://registry.yarnpkg.com/@shopify/cli/-/cli-3.42.0.tgz#9d53faf138fee22904f17c484808b8769980377a"
-  integrity sha512-esVz+ZlmBnkpZMbhMLnOGeO0s4+mYLJTFbhjmqxhu1Pyklt+aIB0LCLH4PKPyHeaMdzzMmL40NfKl4Na2LvLOA==
+"@shopify/cli@3.43.0":
+  version "3.43.0"
+  resolved "https://registry.yarnpkg.com/@shopify/cli/-/cli-3.43.0.tgz#aa3413722e39183954a845a1c4ede3c8f28d5dfc"
+  integrity sha512-ST1dAz2d1aKDwJJKvKcvpgo/b63WihYiCbaU1Cz/CQGrDIH8Zd62LGrM76twKNVavfGjB0MO1KA1YTX6qMIU1A==
   dependencies:
     "@oclif/core" "1.21.0"
     "@oclif/plugin-commands" "2.2.0"
     "@oclif/plugin-help" "5.1.12"
     "@oclif/plugin-plugins" "2.1.0"
-    "@shopify/cli-kit" "3.42.0"
+    "@shopify/cli-kit" "3.43.0"
 
 "@shopify/hydrogen@0.26.0":
   version "0.26.0"
